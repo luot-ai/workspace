@@ -18,17 +18,28 @@
          1. make时指定EXEC，否则默认为main
 3. 合并winograd后的脚本
    1. darknet中的makefile新增 条件变量 REF
-      1. 编译变量COMMON新增 convoFlavor -I.h【.h搜索路径】
-      2. VPATH大坑，增加相关.c路径
-      3. OBJ增加自己需要的文件，这些文件会一起被ar进入.a库
-      4. DEPS是要被当做依赖项的.h文件
-      5. **必须得注意同名文件，否则会出现只包含先出现的那个的情况**
+      1. 注意变量后不能有注释
+      2. 编译变量COMMON新增 convoFlavor -I.h【.h搜索路径】
+      3. VPATH大坑，增加相关.c路径
+      4. OBJ增加自己需要的文件，这些文件会一起被ar进入.a库
+      5. DEPS是要被当做依赖项的.h文件
+      6. **必须得注意同名文件，否则会出现只包含先出现的那个的情况**
    2. gem5/scrpits中有main.sh
       1. ./main.sh xxx   xxx默认为main
       2. 进入darknet中编译xxx，反汇编入./obj/important
       3. 回到本目录，执行./run xxx
 4. 开始深入汇编
-   1. m5_dump_reset_stats
-      1. .c文件中include头文件，在需要的地方加入m5_dump_reset_stats
-      2. makefile中COMMON加入-I，LDFLAGS加入相应库的路径-Lxxx -lm5
-      3. 效果就是stat会被切分
+   1. m5_dump_reset_stats函数
+      1. 使用
+         1. .c文件中include头文件，在需要的地方加入m5_dump_reset_stats
+         2. makefile中COMMON加入-I，LDFLAGS加入相应库的路径-Lxxx -lm5
+      2. 效果就是stat会被切分，结合debug的trace
+         1. 可以观察自己关注的程序段
+         2. 查看循环每次执行的时间，关注执行时间较长的某次迭代
+5. 查看流水
+   1. Ds是无法issue的意思，可能是[dependenci] [barrier or non-speculative]
+      1. m5op是那种指令，所以导致serialize，它commit的下一周期才真正离开rob，下一条指令需要两周期进行rename
+6. 建立仓库
+   1. 先建立远程，包括子仓库
+   2. 本地设置好url，包括在父目录下设置子仓库的url
+   3. 从最孙仓库开始，逐层往上提交

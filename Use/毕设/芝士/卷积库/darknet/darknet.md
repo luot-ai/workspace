@@ -12,3 +12,5 @@
 1. 分组卷积
 
    1. ifmap和ofmap按group在channel上分，独立完成卷积后再拼接
+
+

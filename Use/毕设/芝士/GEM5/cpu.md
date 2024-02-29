@@ -19,7 +19,7 @@
 
 ## MinorCpu
 
-* 顺序的四级流水
+* 顺序的四级流水fetch12 decode execute
 * 代码框架
   * cpu.hh中定义了一个pipeline，在pipeline中具体实现
   * cpu.cc中实例化该pipeline
@@ -43,11 +43,11 @@
   * pipeline继承自tick，后者`事件驱动`：每周期上升沿会调用evaluate函数
   * pipeline`override`evaluate函数，这个函数里头会调用各stage的evaluate
     * 各stage可以调用一个函数来signal下一周期的activity
-
+ 
 * 各流水级：（只看了比较关心的部分）
   * 执行级
     * 指令可能需要多周期执行，其精确的时序由一个**FU-PIPELINE**来建模
-      * 每个FU通过参数 executeFuncUnits 来配置
+      * 每个FU通过 参数 executeFuncUnits 来配置
     * **FU-PIPELINE**
       * 继承自selfStallPipeline和Funcunit
         * 主要是selfstallpp这个
@@ -70,7 +70,7 @@
         * 本质上是一个装了MInorFU的vector
         * 每个MInorFU都对应着一个FUpp的描述
         * 在Execute构造函数(即`构建这个流水级`)中用一个循环来使用fuDescriptions实例化一个个fu，并填到execute的成员变量中
-      * **`就是得自顶向下看，被sb教程误导了`**
+      * **`就是得自顶向下看，被教程误导了`**
         * 先处理中断，然后commit->issue->各fuAdvance(交杂着判断need_tick->下一拍有没有事情)->设置mightCommit
       * commit
         * 涉及`drain`，必要的话可以关注自动机
@@ -105,7 +105,6 @@
           * 可以直接execute
           * 也可以initiate complete
       * 生成的函数是比较傻的，就是switch各个域，比对指令
-  * 执行的话是commitInst的时候算的
-    * 也是生成的函数 
+  * 执行的话是commitInst的时候调用生成的 inst->staticInst->execute函数做的
     * 使用context接口去读写寄存器
   

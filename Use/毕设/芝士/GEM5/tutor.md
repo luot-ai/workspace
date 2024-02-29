@@ -12,7 +12,7 @@
       * stats.txt
   * 目录介绍
     * common下的options**命令行中可指定的参数**
-      * 涉及到manymanycore
+      * 涉及到manymanycore【homework6中有众核】
       * simulation涉及到checkpoint
       * 所有的选项被addXXOptions包含，其他代码文件基本会调用该函数
     * example下有se和fs，比较重要
