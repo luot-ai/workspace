@@ -1,0 +1,3 @@
+[submodule "other"]
+	path = other
+	url = git@github.com:luot-ai/something.git
