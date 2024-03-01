@@ -12,10 +12,23 @@
 
 ## O3Cpu
 
-* 基于alpha21264的乱序
-* **模板化template策略**
-* 低级别的模块在此处实现，高级别的就相当于ISA相关了呗（得另外实现
-* very configurable
+* 特点
+  * 基于alpha21264的乱序
+  * **模板化template策略**
+  * 低级别的模块在此处实现，高级别的就相当于ISA相关了呗（得另外实现
+  * very configurable
+* 代码
+  * general
+    * 在cpu.cc中实例化构造各成员时，会将params赋给相应的成员
+      * 
+    * baseO3CPU中包含各种delay和width，并且使用的是defaultFupool
+  * Fu相关
+    * 省流
+      * 逻辑是`FuPool`包含`Fu`包含`op`；fu有个count，op有个lat(1)和pipe(T)
+      * 进入config.ini可以查看，要更改请移步fupool.py或fuconfig.py
+    * 代码编写
+      * 一个fupool包含了几个列表，长度为num_opclasses，分别记录了maxOpLat pipe capable【fu是oplat pipe capable】
+        * 以及一个fupercaplist，包含属于各op的Fu编号【用一个循环队列实现，可以方便读取空闲的fu】
 
 ## MinorCpu
 

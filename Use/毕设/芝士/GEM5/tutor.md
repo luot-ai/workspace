@@ -9,6 +9,7 @@
   * 仿真类型：SE和FS(全系统仿真)
     * 仿真结果m5out
       * config.ini用于检查系统的最终配置
+        * **这里每一个Type都直接对应到相应的.py，可以对照查看代码；然后children可能要查看py中所对应的.h**
       * stats.txt
   * 目录介绍
     * common下的options**命令行中可指定的参数**

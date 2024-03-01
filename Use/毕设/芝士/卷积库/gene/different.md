@@ -17,11 +17,12 @@
 
 ## favour：winograd
 
-* winograd5的im2col用fast和O2没啥区别，直接在O2上分析
+* winograd5的im2col用fast和O2没啥区别，直接在O2上分析，此外还得结合col2im
   * 向量扩展去做也挺好的，不知道编译上如何支持，以及gem5是否支持
-    * gem5是支持RVV，输出里有RVV enabled VLEN ELEN可以顺着代码看下
+    * gem5是支持`RVV`，输出里有RVV enabled VLEN ELEN可以顺着代码看下
     * 记得老师也说过可以去看看RVV做得不好的地方
     * 也就是说就算gem5支持，也可以模仿他的改一下
+    * 此外`RVV`和`SIMD`的区别，然后感觉gem5的simd有点扯，怎么lat=1？
   * 或者，想点新奇的招数？
 
 * winograd5的Ofast比O2快很多
