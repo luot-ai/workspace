@@ -7,13 +7,12 @@
   ![Alt text](image/1708526147978.png)
   ![Alt text](image/1708526434235.png)
 
-* 研究gemm所得：0229 0845-1012
-  * 发现第二个lw总是长时间处在DS
-    * 看log memDep显示waking...
-    * 到对应代码下去看，发觉应该和前面的store有关
-    * 在到store的log去查看，可以看到store添加了这lw(以及下面一个sw)到他的depende列表里
-    * 结合searching for producing的代码，发觉可能是一个错误的访存预测导致了这个结果
-    * 虽说是个无聊的bug，但是也熟悉了代码
+* 研究gemm所得：0229 0845-1012【0302补充，图直观但是并不全对，看out】
+  * gem5里面mem指令来到IQ时会进行dependency检查
+    * 用的是一篇论文里的，具体目的是预测某memref指令是否依赖于前面的store【store为啥会依赖于store】
+      * 若预测依赖，则即使该指令操作数就绪也不能issue...
+    * 但是在矩阵乘的时候总是预测错误，sw->sw sw->lw2
+    * 这属于啥问题...
 
 ## favour：winograd
 

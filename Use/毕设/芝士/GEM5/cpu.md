@@ -20,7 +20,9 @@
 * 代码
   * general
     * 在cpu.cc中实例化构造各成员时，会将params赋给相应的成员
-      * 
+      * setTBuf是设置backward，setXX是正向
+      * 结合trace可知**tick是每周期最开始做的事情**
+        * 
     * baseO3CPU中包含各种delay和width，并且使用的是defaultFupool
   * Fu相关
     * 省流
