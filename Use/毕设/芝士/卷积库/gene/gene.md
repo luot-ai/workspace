@@ -9,32 +9,9 @@
 
 # GENE
 
-1. 各维度
-
-   1. 卷积： `col+gemmING`,`winogradING`
-   2. 忘却
-      1. `dilated_conv`有在darknet上现成的开源，
-      2. `transpose_conv`例如fcn有在caffe上实现
-         1. 学caffe工作量大，不过darknet是个好的入手点
-         2. 也可以看着源码来搭建？-darknet里可能已经有 `deconv`
-         3. 亦或是做一个简单的demo单纯验证功能性，到后期在尝试跑大的网络
-      3. `deformable_conv`量大，可能会是个好点，不过估计不好验证
-2. 想到的点
-
-   1. gemm找到gem5中一个依赖性预测bug（详见memdep里的pre啥的，根据pc查表，有论文），然后发现有错误的预测导致sw后的lw发射过晚
-   2. im2col和wino5见那几张纸
-      1. wino除了现在核心循环那，其实还可以分析下其他部分
-3. 服务器还没好，在那之前两种方法都可以试下：
-
-   1. 代码 环境【gem5和rv和konata】
-   2. 可能要把 `所有代码zip和konata和rv工具链`压缩下来让他传
-   3. 不如用下面这个网页里的docker
-   4. 不知道这个网页[gem5bootcamp/gem5-bootcamp-env (github.com)](https://github.com/gem5bootcamp/gem5-bootcamp-env)上的有没有用，毕竟有prebuilt好的玩意儿，可能可以直接跑？![1709542940223](image/gene/1709542940223.png)
-4. 最后阶段【实现+实验】
+1. 最后阶段【实现+实验】
 
    1. 0317完成指令和具体的做法
-
-      1. 扩展指令的实现可以结合数据流吗
    2. 0324改动C源码
    3. 0407Gem5源码
    4. 0414DEBUG
@@ -65,6 +42,6 @@
          2. 可形变是一个美好的愿景
          3. wino3和wino4有通用的部分，就是一维wino，看看有没有必要做，然后可能也有一些其他的点
             1. 大概是没有必要了，毕竟wino其实只需要一种就好了
-   10. 回顾龙芯和毕设历程，结合dia
+   10. 回顾龙芯和毕设历程，结合dia和git commit
    11. 整理workspace
    12. 结合纸和wrkspace，做个gem5教程
