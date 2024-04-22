@@ -47,3 +47,12 @@
    1. 记得在main.sh里改动
       1. 不带1的用来测时间
       2. 带1的看Exec和Pipe
+8. 新脚本
+   1. 顶层划分
+      1. main.sh 负责 darknet
+      2. myt.sh 负责 winomain
+   2. 次层
+      1. 新增fast脚本，顶层0调用的是fast
+      2. 现在run_darknet_fast和run_darknet的命令行参数没用了，直接在底层脚本写死
+   3. 底层
+      1. gem5里那个脚本，新增了个fast，写死参数，输出在outputFast

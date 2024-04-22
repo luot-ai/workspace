@@ -25,12 +25,6 @@ ysyx下有独立的nemu啥的，就在下面整ysyx    ~下有NEMU，设置一�
 
 总结就是CPU+DIFF=EMU，程序=BIN，NEMU=动态链接库，三者合并跑仿真
 
-# 2.server
-
-整香山，看能不能跑果壳
-
-
-
 # record
 
 1. /home/lt7203610626/.cache/mill/download/0.11.2: 48: exec: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java/bin/java: not found
