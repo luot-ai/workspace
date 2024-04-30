@@ -1,48 +1,43 @@
-* 跑网络
+* 写论文
+
+  * **查重，字数一万五**
+  * 整理数据，完成ch3
+  * 致谢
+  * 可能还需要凑字数
+  * 肯定还要改-论文引用
+  * 再ckt，看看字体
+* 答辩PPT
+* ## 跑网络
+
 
   * 模型
 
-    * tiny-darknet
-    * tiny-yolo
-    * 以上两个最基础，分类还可以加个resnet?vgg实在太大，yolo都已经很大
+    * tiny-darknet分类
+    * tiny-yolo目标检测
+    * resnet分类
+    * vgg实在太大，yolo都已经很大
   * 跑法
 
-    * cv_layer改一下if=4，origin跑网络
-    * 出尺寸，查一查，k=3且为偶数，下载
+    * 出尺寸，查一查，k=3且为偶数
+    * 方案
+
+      * if=4，全跑im2col
+      * wino_cus改一下，区分原始和改动
     * 换咱的跑，下载验证
 
       * 确保有扩展指令执行
       * 功能验证-检测或者分类，有个prediction_png
       * 加速效果
-  * 发现错误？
-* 写文档
-* 写论文
+  * 目前
 
-  * ch3
-    * 看看别人，布局，写，分层也得测
-  * 结论摘要致谢
-  * 目录、字体
-  * ckt与小改
-* 性能调优
-
-  * hard
-    * 增加一些寄存器进行细致的访存-计算调优，因为ld_output实在太慢【这个不急，因为现在也有加速效果】
-    * 简单改成oacc 0和3都就绪后续迭代就load的话应该会好些？因为等ld_output太慢了
-  * easy
-    * 调参-发射宽度
-    * 调编译选项，改为O2
-* 隐患
-
-  * branch_mispredict
-  * notrdySn可能有小问题，主要是squash对ldk的影响
-* 小调整
-
-  * debugflag，custom的打印信息
-  * 写的丑的地方模板化
-  * notrdylist和notrdyldk有歧义
-  * 目前notrdyldk基本能维护只有至多一个inst在list里，所以pop_front和push_back用得有些不对也无所谓，但有机会还是得改改吧【换个数据结构】
-  * 设置vloaddestvec=idx1
-  * 前提太多了，若无必要勿增实体
+    * width=4
+    * 乘法给他调成multi了
+    * 后续可能还得查一下【不过也还要进行性能提升】
+      * 尺寸的原因？
+      * 在框架里跑就是不如直接裸跑
+* ## 毕设后
+* 等答辩准备好后再计划
+* 实验没有达到理想结果
 * 后续
 
   * 目前一个最大的问题就是控制逻辑【精细调控vs改为通用方法直接调参】
@@ -54,3 +49,24 @@
   * 如何把问题迁移到darknet上，darknet是一款轻量级神经网络，适合部署在边缘端，但该框架没有winograd
   * 可能做算法上的探索：winograd和im2col如何搭配+一些扩展指令的点
   * 寄存器的数量以及winograd+im2col=设计空间探索，参考V-extension这篇文章【里头有rfline】
+  * 扩张-转置-可形变 考虑一下？
+* 性能调优
+
+  * hard
+
+    * 增加一些寄存器进行细致的访存-计算调优，因为ld_output实在太慢【这个不急，因为现在也有加速效果】
+    * 简单改成oacc 0和3都就绪后续迭代就load的话应该会好些？因为等ld_output太慢了
+* 隐患
+
+  * ld8_fault 错误路径却写cvec，异常恢复后同一指令继续写
+  * branch_mispredict
+  * notrdySn可能有小问题，主要是squash对ldk的影响
+* 小调整
+
+  * 脚本混乱，脚本说明在runGem5中
+  * debugflag，custom的打印信息
+  * 写的丑的地方模板化
+  * notrdylist和notrdyldk有歧义
+  * 目前notrdyldk基本能维护只有至多一个inst在list里，所以pop_front和push_back用得有些不对也无所谓，但有机会还是得改改吧【换个数据结构】
+  * 设置vloaddestvec=idx1
+  * 前提太多了，若无必要勿增实体

@@ -49,8 +49,9 @@
       2. 带1的看Exec和Pipe
 8. 新脚本
    1. 顶层划分
-      1. main.sh 负责 darknet
-      2. myt.sh 负责 winomain
+      1. 顶层里需要修改是fast还是opt，fast只用于0测时间，opt可0可1
+      2. main.sh 负责 darknet
+      3. myt.sh 负责 winomain
    2. 次层
       1. 新增fast脚本，顶层0调用的是fast
       2. 现在run_darknet_fast和run_darknet的命令行参数没用了，直接在底层脚本写死
