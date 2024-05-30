@@ -48,12 +48,29 @@
       1. 不带1的用来测时间
       2. 带1的看Exec和Pipe
 8. 新脚本
-   1. 顶层划分
-      1. 顶层里需要修改是fast还是opt，fast只用于0测时间，opt可0可1
-      2. main.sh 负责 darknet
-      3. myt.sh 负责 winomain
-   2. 次层
-      1. 新增fast脚本，顶层0调用的是fast
-      2. 现在run_darknet_fast和run_darknet的命令行参数没用了，直接在底层脚本写死
-   3. 底层
-      1. gem5里那个脚本，新增了个fast，写死参数，输出在outputFast
+   1. ./test.sh搭配命令行；./myt.sh 0测单个；./main.sh 0跑神经网络
+   2. 顶层 main.sh myt.sh
+      1. run_mode	pipe
+
+         1. =0，run_darknet.sh测时间
+            1. **需要在脚本里修改次层脚本none or _fast**
+         2. =e，run_darknet1.sh测指令序列trace
+         3. none，run_darknet1.sh测流水线trace
+            1. **可在次层脚本修改DEBUGFLAG**
+      2. main_program
+
+         1. darknet
+         2. winomain【】
+      3. size等
+
+         1. myt【run_fast & run】专属
+         2. ***在test.sh中指示***
+   3. 次层 none _1 _fast
+      1. _1最下面的命令行无用
+      2. none与_fast的RUNMODE参数无用
+      3. fast调用gem5.fast dknet_fast.py
+      4. fast和none***最下命令行接了SIZE等参数，传到底层，可能有用***
+   4. 底层
+      1. none _fast
+      2. 若要winomain，则在cmd里写死
+      3. ***目前都可以接受size等，在cmd替换***
