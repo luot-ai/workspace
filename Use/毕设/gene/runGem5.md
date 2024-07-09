@@ -72,5 +72,6 @@
       4. fast和none***最下命令行接了SIZE等参数，传到底层，可能有用***
    4. 底层
       1. none _fast
-      2. 若要winomain，则在cmd里写死
+      2. 若要darknet，则在cmd里写死
       3. ***目前都可以接受size等，在cmd替换***
+   5. winomain中的数字自己设置，可以写死，也可以用test传下来的
