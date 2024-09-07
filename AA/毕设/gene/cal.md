@@ -31,8 +31,22 @@
       * 33=25+8，25可以上下浮动
     * Base的实际值：72ops/(243+36+76=355cycles)
       * 243=[(25+2)×3]×3，25可以上下浮动
+      * Base的峰值：72/76 * 800 = 0.758
   * 池化
 
     * 直接按这个算：各pooling层input长宽都设为PI
       * 加速比等于  =  （68×PI×PI/8）/（33×PI×PI/16) =  约为4.12
         * 68=27x2+8+6
+* 5.3
+  * Base FPGA(来源于Survey，XCVU9P Xilinx Virtex UltraScale+ FPGA)：
+    * Fmax：112MHz.......
+    * power = 静态power 3080mW + 动态power 1995mW
+    * 46K Registers，55K LUTs， 18DSPs
+    * Gops：72/76 * 112 = 0.106
+    * Effi：0.106/5.075=0.021，看ICCAD 这个数值还挺合理的
+  * Base ASIC（来源于VIRTU，22nm FDX）
+    * 主频：800MHz
+    * power 4.8mW + 动态power 37.2mW
+    * 0.257mm2
+    * Gops：72/76 * 800 = 0.758
+    * Effi: 0.758/42mW=18.05
