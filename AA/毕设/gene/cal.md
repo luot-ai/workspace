@@ -1,4 +1,5 @@
 * 5.2
+
   * 表1：性能之比
     * 所有的卷积层：Our实际Gops/TC实际Gops
       * Our实际Gops=峰值 * U，两个值都是估值，峰值固定，U是某值上下浮动
@@ -16,7 +17,7 @@
     * 池化：
       * (64/8) / (33/16)≈3.87
         * 64=27x2+8+2
-  * 表2：能效之比
+  * 表2：能效之比【这里动静power实际上写错了，但是相差不大】
     * 公式：U×峰值Gops/(U×动power+静power)
       * 卷积层
         * TC：U=实际/峰值 实际见上 峰值=0.225 动power=5.086 静power=0.714
@@ -25,6 +26,7 @@
         * TC： U=1/6 峰值=1
         * Our：U= 4/33(33上下浮动)  峰值=8
 * 5.1
+
   * Our Vs Base 加速比，主频一致
 
     * Our的实际值：72ops/33cycles
@@ -38,15 +40,26 @@
       * 加速比等于  =  （68×PI×PI/8）/（33×PI×PI/16) =  约为4.12
         * 68=27x2+8+6
 * 5.3
+
   * Base FPGA(来源于Survey，XCVU9P Xilinx Virtex UltraScale+ FPGA)：
+
     * Fmax：112MHz.......
     * power = 静态power 3080mW + 动态power 1995mW
     * 46K Registers，55K LUTs， 18DSPs
-    * Gops：72/76 * 112 = 0.106
-    * Effi：0.106/5.075=0.021，看ICCAD 这个数值还挺合理的
+    * Gops：72/76 * 112 （Mops）= 106
+    * Effi：106/5075(mW)=0.021，看ICCAD 这个数值还挺合理的
+  * Our FPGA
+
+    * Gops：72/11 * 112 （Mops）= 733
+    * Effi：733/5370(mW)=0.137
   * Base ASIC（来源于VIRTU，22nm FDX）
+
     * 主频：800MHz
     * power 4.8mW + 动态power 37.2mW
     * 0.257mm2
-    * Gops：72/76 * 800 = 0.758
-    * Effi: 0.758/42mW=18.05
+    * Gops：72/76 * 800 （Mops）  = 758
+    * Effi: 758/42 (mW)=18.05
+  * Our FPGA
+
+    * Gops：72/11 * 800 （Mops）= 5236
+    * Effi：5236/43.34(mW)=120.82
