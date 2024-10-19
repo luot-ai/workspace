@@ -1,0 +1,45 @@
+GPT上班之后继续，贵/生态/兼容，分别用夏腾飞的和我的提供给gpt点子，让gpt去写/整合，同时别忘了引用
+兼容 the rapid development of AI algorithms makes it difficult for ASIC to keep pace
+生态 depend on specific frameworks/ Moreover, different accelerators often come with distinct programming models and interfaces, which hinders the development of a unified ecosystem
+贵 expensive
+
+1.定制化的缺点那，其实是用了TPU的引用【然后当时是两个引用，直接不管，一个分给生态，一个分给贵：其实也差不多】
+2.FPGA的两个可以加上引用：
+@INPROCEEDINGS{7544745,
+  author={Venieris, Stylianos I. and Bouganis, Christos-Savvas},
+  booktitle={2016 IEEE 24th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM)}, 
+  title={fpgaConvNet: A Framework for Mapping Convolutional Neural Networks on FPGAs}, 
+  year={2016},
+  volume={},
+  number={},
+  pages={40-47},
+  keywords={Field programmable gate arrays;Hardware;Machine learning;Computational modeling;Space exploration;Computer architecture;Matrix decomposition},
+  doi={10.1109/FCCM.2016.22}}
+
+
+@ARTICLE{8438987,
+  author={Bai, Lin and Zhao, Yiming and Huang, Xinming},
+  journal={IEEE Transactions on Circuits and Systems II: Express Briefs}, 
+  title={A CNN Accelerator on FPGA Using Depthwise Separable Convolution}, 
+  year={2018},
+  volume={65},
+  number={10},
+  pages={1415-1419},
+  keywords={Convolution;Standards;Field programmable gate arrays;Adders;Bandwidth;System-on-chip;Engines;Convolutional neural network;FPGA;hardware accelerator;MobileNetV2},
+  doi={10.1109/TCSII.2018.2865896}}
+
+
+	目前的需求是通用性+性能，急需一种巴拉巴拉，RISC-V的出现一拍即合
+	然后下面那一节就是 RISC-V and 基于RISCV做的CNN扩展
+	先超级简要介绍RISCV
+	再介绍RISC-V做的扩展
+
+
+
+
+
+
+
+
+
+
