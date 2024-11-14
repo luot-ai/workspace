@@ -47,31 +47,37 @@
    1. 记得在main.sh里改动
       1. 不带1的用来测时间
       2. 带1的看Exec和Pipe
-8. 新脚本
-   1. ./test.sh搭配命令行；./myt.sh 0测单个；./main.sh 0跑神经网络
-   2. 顶层 main.sh myt.sh
-      1. run_mode	pipe
+8. 新脚本【真得找机会合并一下...】
+   * ./test.sh搭配命令行->使用myt.sh对单层神经网络进行参数化测试
+   * 顶层 main.sh【darknet】 myt.sh【winomain】
+     * run_mode
 
-         1. =0，run_darknet.sh测时间
-            1. **需要在脚本里修改次层脚本none or _fast**
-         2. =e，run_darknet1.sh测指令序列trace
-         3. none，run_darknet1.sh测流水线trace
-            1. **可在次层脚本修改DEBUGFLAG**
-      2. main_program
+       * =0，测时间
+         * 设置使用run_darknet 还是 run_darknet_fast
+       * =e，run_darknet1.sh测指令序列trace
+       * =default (pipe)，run_darknet1.sh测流水线trace
+         * **可在次层脚本修改DEBUGFLAG**
+     * main_program
 
-         1. darknet
-         2. winomain【】
-      3. size等
+       * 设置testbench
+     * size等params
 
-         1. myt【run_fast & run】专属
-         2. ***在test.sh中指示***
-   3. 次层 none _1 _fast
-      1. _1最下面的命令行无用
-      2. none与_fast的RUNMODE参数无用
-      3. fast调用gem5.fast dknet_fast.py
-      4. fast和none***最下命令行接了SIZE等参数，传到底层，可能有用***
-   4. 底层
-      1. none _fast
-      2. 若要darknet，则在cmd里写死
-      3. ***目前都可以接受size等，在cmd替换***
-   5. winomain中的数字自己设置，可以写死，也可以用test传下来的
+       * myt【run_fast & run】专属
+       * ***在test.sh中指示***
+   * 次层_none[opt测时间] _1[opt测trace] __fast[fast测时间]
+     * _1最下面的命令行无用
+     * none与_fast都测时间
+
+       * RUNMODE参数无用
+       * 最下命令行接了SIZE等参数，传到底层，可能有用
+     * 使用的底层脚本
+
+       * fast->gem5.fast dknet_fast.py
+       * other->gem5.opt dknet.py
+   * 底层
+     * none _fast【记得在对应的脚本里改！】
+     * cmd
+       * 若使用darknet，需要在cmd中选择合适的检测模式/权重/图像【已有demo】
+       * 若使用winomain，cmd里传递参数，当然winomain源码中不一定需要这些参数
+     * cpu等参数
+   * winomain中的参数：使用传递的参数 or 直接写死
