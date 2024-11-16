@@ -10,7 +10,11 @@
   * docker load -i gem5.tar
   * docker image ls
   * docker run -it -v 放置gem5代码的路径:/gem5 映像文件名
-  
+* 上传
+  * podman login docker.io
+  * podman tag gem5_rvtool:v1 amn0428/gem5_rvtool:v1
+  * podman push amn0428/gem5_rvtool:v1
+
 ## Gem5文档下啥都有
 
 ### Gem5 standard library
