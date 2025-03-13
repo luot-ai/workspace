@@ -3,7 +3,7 @@
   * 表1：性能之比
     * 所有的卷积层：Our实际Gops/TC实际Gops
       * Our实际Gops=峰值 * U，两个值都是估值，峰值固定，U是某值上下浮动
-        * 峰值=(72ops/11cycles)*800MHz=5.2352Gop/s
+        * 峰值=(72ops/11cycles)*800MHz=5.2352Gop/s   72/4=18=9MAC
         * U=11/33
       * TC实际Gops=操作量/时间
         * 操作量：由表可算，每一层=OH×OW×OC×IC×(9+9)，这里OH和OW就是表里的IH和IW
