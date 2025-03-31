@@ -80,7 +80,6 @@
   - Cache 8KB+8KB 一行64B，2路，64行
   - 乱序怎么个乱法
     - 乱序主要是靠：重命名，保留站乱序发射以及ROB按序提交实现的
-
       - 指令从前端取指队列出队之后，会来到派遣阶段，这一阶段我们进行重命名
         - 我们采取的是基于全物理器重命名的方法，需要使用源寄存器号从重命名映射表中读出对应的物理寄存器号
         - 要写回的指令需要从空闲物理寄存器表中获取目的物理寄存器号，更改这里的映射表
@@ -93,7 +92,11 @@
       - ROB
         - 指令在后端经历读操作数/执行/写回三个阶段，就会在ROB中标记已完成
         - 已完成的指令在ROB中按序退休（出队）
-        - 正常的指令修改arat，分支预测失误或异常的指令需要在此完成重定向
+        - 正常的指令修改arat+归还freelist，分支预测失误或异常的指令需要在此完成重定向
+- 难点
+
+  - 延迟槽：多发射退休，分支预测失误需要处理延迟槽
+    - 延迟槽必须退休，延迟槽Exer必须处理
 - 软
 
   - scala
@@ -141,16 +144,19 @@
           - 只要某保留站满，后续的所有指令都没法通过(考虑某程序段包含大量的加减法指令)
     - 执行[ALU]
 
-      - 分支预测失误恢复
-        - 禁止分发入dispatch
-        - 清空instbuffer
-        - 前端重定向
-        - 后端rob清空后允许前端分发
+      - 分支预测
+
+        - alu发出三个信号：happen target robidx
+        - dispatch
+          - 若rob给出延迟槽已经进入，则下一拍来到redirect状态
+          - redirect前端，重新取指。并且block，不让指令往保留站和rob走
+            - 在flushbackend的下一拍，解除block【为了保证mispre及其前面的指令退休】
+            - flushbackend的时候，arat会复制给srat
     - 写回
 
-      - res->PRF[pdest]
-      - srat[adest].pdest = pdest ? inprf->1↑
-      - exdetect->rob[robidx]
+      - 结果写回全物理寄存器：res->PRF[pdest]
+      - 更改前端预测性的重命名映射表：srat[adest].pdest = pdest ? inprf->1↑
+      - 异常和分支预测错误信息写入指令在rob中对应的位置：exdetect->rob[robidx]
     - 退休
 
       - 两级
@@ -158,6 +164,19 @@
         - 二级真正的退休
       - 处理特殊情况：异常&分支预测错误
         - 二级多周期自动机处理
+      - 分支预测失误
+        - 当拍退休延迟槽及其之前的指令，下一拍来到prenext
+          - 在这一级判断下一拍进入什么状态
+            - ds若正在retiring（即来到retire第二级）：misflush
+              - dspoped但是没retireing：exer
+            - ds若done（即目前在retire第一级并且已经done）：dsretire
+            - 否则：mpnext->等待ds
+          - mpnext
+            - 处理逻辑同prenext状态，只不过可以明确此时不会dsretiring/dspoped
+          - dsretire
+            - 下一拍misflush
+          - misflush
+            - flushbackend拉高，刷掉后端流水线中剩余指令
     - cache
 
       - 八股
