@@ -146,6 +146,9 @@
   - 包括dispatch/rename/issue exe(part) retire
     - 重命名
 
+      - 意义
+        - 避免WAW/RAW
+        - 提升指令调度自由度（和）
       - 基于ROB：进入ROB时自然的采用ROB号重命名，重命名比较简单，但是数据要在ROB和arch寄存器之间搬移。
         - 通常搭配数据捕捉，payload ram直接从旁路获取数据，不需要关心数据的来源
         - ROB开辟空间浪费
