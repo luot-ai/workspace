@@ -1,0 +1,33 @@
+#define CEIL(a,b) ((a+b-1)/b)
+dim3 blk_size(1024);
+dim3 grid_size(CEIL(N,1024));
+kernel<<<grid_size, blk_size>>>(input, output, N);
+
+
+//使用 warp 内指令，无需 shared memory，也不用 __syncthreads()
+//寄存器直通硬件交换, 无需同步
+_global_ void kernel(float *input, float *output, int N) {
+    _shared_ float sdata[32];
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+    int warp_id = threadIdx.x / warpSize;
+    int lane_id = threadIdx.x % warpSize;
+    float val = idx < N ? input[idx] : 0.0f;
+    #pragma unroll
+    for (int offset = warpSize >>1; offset > 0; offset >>= 1) {
+        val += __shfl_down_sync(0xFFFFFFFF, val, offset);
+    }
+    if (lane_id == 0) {
+        sdata[warp_id] = val;
+    }
+    __syncthreads();
+    if (warp_id == 0){
+        float val = sdata[lane_id];
+        #pragma unroll
+        for (int offset = warpSize >>1;offset >0 ; offset >>= 1) {
+            val += __shfl_down_sync(0xFFFFFFFF, val, offset);
+        }
+        if(lane_id == 0) {
+            atomicAdd(output, val);
+        }
+    }
+}
