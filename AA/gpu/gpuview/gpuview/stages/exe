@@ -1,0 +1,173 @@
+10867111707000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_load_dwordx4 s[4:7], s[0:1], 0x00 (pc: 0x7fd1b6c06100; seqNum: 1)
+10867111707000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06108)
+10867111711000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_load_dwordx4 s[8:11], s[0:1], 0x10 (pc: 0x7fd1b6c06108; seqNum: 2)
+10867111711000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06110)
+10867111727000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_load_dwordx4 s[12:15], s[0:1], 0x20 (pc: 0x7fd1b6c06110; seqNum: 3)
+10867111727000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06118)
+10867111743000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_load_dwordx4 s[16:19], s[0:1], 0x30 (pc: 0x7fd1b6c06118; seqNum: 4)
+10867111743000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06120)
+10867111759000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_load_dwordx4 s[20:23], s[0:1], 0x40 (pc: 0x7fd1b6c06120; seqNum: 5)
+10867111759000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06128)
+10867111775000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_load_dword s24, s[0:1], 0x50 (pc: 0x7fd1b6c06128; seqNum: 6)
+10867111775000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06130)
+10867111776000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_waitcnt lgkmcnt(0) (pc: 0x7fd1b6c06130; seqNum: 7)
+10867111776000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06134)
+10867113079000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_lshl_b32 s2, s2, 6 (pc: 0x7fd1b6c06134; seqNum: 8)
+10867113079000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06138)
+10867113082000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v0, vcc, s2, v0 (pc: 0x7fd1b6c06138; seqNum: 9)
+10867113082000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c0613c)
+10867113086000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_mov_b32 v3, s5 (pc: 0x7fd1b6c0613c; seqNum: 37)
+10867113086000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06140)
+10867113090000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v2, vcc_lo, v0, s4 (pc: 0x7fd1b6c06140; seqNum: 38)
+10867113090000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06148)
+10867113094000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc (pc: 0x7fd1b6c06148; seqNum: 39)
+10867113094000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06150)
+10867113098000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_mov_b32 v5, s7 (pc: 0x7fd1b6c06150; seqNum: 40)
+10867113098000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06154)
+10867113102000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v4, vcc_lo, v0, s6 (pc: 0x7fd1b6c06154; seqNum: 53)
+10867113102000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c0615c)
+10867113106000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc (pc: 0x7fd1b6c0615c; seqNum: 54)
+10867113106000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06164)
+10867113110000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_cmp_lt_u64 s[106:107], v[2:3], s[8:9] (pc: 0x7fd1b6c06164; seqNum: 58)
+10867113110000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c0616c)
+10867113113000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_cbranch_vccz (pc: 0x7fd1b6c0616c; seqNum: 62)
+10867113113000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave1 s_cbranch_vccz taken branch
+10867113113000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061ac)
+10867113119000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_mov_b64 exec, -1 (pc: 0x7fd1b6c061ac; seqNum: 77)
+10867113119000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061b0)
+10867113123000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_lshl_b32 s25, s24, 4 (pc: 0x7fd1b6c061b0; seqNum: 78)
+10867113123000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061b4)
+10867113124000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_lshlrev_b32 v1, 4, v0 (pc: 0x7fd1b6c061b4; seqNum: 79)
+10867113124000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061b8)
+10867113128000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_mov_b32 v3, s9 (pc: 0x7fd1b6c061b8; seqNum: 80)
+10867113128000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061bc)
+10867113132000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v2, vcc_lo, v1, s8 (pc: 0x7fd1b6c061bc; seqNum: 81)
+10867113132000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061c4)
+10867113136000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc (pc: 0x7fd1b6c061c4; seqNum: 82)
+10867113136000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061cc)
+10867113140000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_mov_b32 v5, s11 (pc: 0x7fd1b6c061cc; seqNum: 83)
+10867113140000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061d0)
+10867113144000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v4, vcc_lo, v1, s10 (pc: 0x7fd1b6c061d0; seqNum: 84)
+10867113144000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061d8)
+10867113148000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc (pc: 0x7fd1b6c061d8; seqNum: 85)
+10867113148000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061e0)
+10867113152000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_cmp_lt_u64 s[106:107], v[2:3], s[12:13] (pc: 0x7fd1b6c061e0; seqNum: 86)
+10867113152000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c061e8)
+10867113165000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_cbranch_vccz (pc: 0x7fd1b6c061e8; seqNum: 87)
+10867113165000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave1 s_cbranch_vccz taken branch
+10867113165000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06224)
+10867113171000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_lshl_b32 s25, s24, 2 (pc: 0x7fd1b6c06224; seqNum: 129)
+10867113171000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06228)
+10867113172000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_lshlrev_b32 v1, 2, v0 (pc: 0x7fd1b6c06228; seqNum: 130)
+10867113172000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c0622c)
+10867113176000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_mov_b32 v3, s13 (pc: 0x7fd1b6c0622c; seqNum: 131)
+10867113176000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06230)
+10867113180000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v2, vcc_lo, v1, s12 (pc: 0x7fd1b6c06230; seqNum: 132)
+10867113180000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06238)
+10867113184000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc (pc: 0x7fd1b6c06238; seqNum: 133)
+10867113184000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06240)
+10867113188000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_mov_b32 v5, s15 (pc: 0x7fd1b6c06240; seqNum: 134)
+10867113188000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06244)
+10867113192000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v4, vcc_lo, v1, s14 (pc: 0x7fd1b6c06244; seqNum: 135)
+10867113192000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c0624c)
+10867113196000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc (pc: 0x7fd1b6c0624c; seqNum: 136)
+10867113196000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06254)
+10867113200000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17] (pc: 0x7fd1b6c06254; seqNum: 137)
+10867113200000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c0625c)
+10867113205000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_cbranch_vccz (pc: 0x7fd1b6c0625c; seqNum: 138)
+10867113205000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06260)
+10867113209000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_and_b64 exec, exec, vcc_lo (pc: 0x7fd1b6c06260; seqNum: 139)
+10867113209000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06264)
+10867113210000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: flat_load_dword v1, v[2:3] (pc: 0x7fd1b6c06264; seqNum: 140)
+10867113210000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c0626c)
+10867113211000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v2, vcc_lo, v2, s25 (pc: 0x7fd1b6c0626c; seqNum: 141)
+10867113211000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06274)
+10867113215000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc (pc: 0x7fd1b6c06274; seqNum: 142)
+10867113215000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c0627c)
+10867113219000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_waitcnt vmcnt(0) (pc: 0x7fd1b6c0627c; seqNum: 185)
+10867113219000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06280)
+10867113253000: system.Shader.CUs11.wavefronts00: CU11: WF[0][0]: wave11 s_cbranch_vccz taken branch
+10867113255000: system.Shader.CUs10.wavefronts00: CU10: WF[0][0]: wave10 s_cbranch_vccz taken branch
+10867113303000: system.Shader.CUs10.wavefronts00: CU10: WF[0][0]: wave10 s_cbranch_vccz taken branch
+10867113305000: system.Shader.CUs11.wavefronts00: CU11: WF[0][0]: wave11 s_cbranch_vccz taken branch
+10867113323000: system.Shader.CUs15.wavefronts00: CU15: WF[0][0]: wave15 s_cbranch_vccz taken branch
+10867113323000: system.Shader.CUs14.wavefronts00: CU14: WF[0][0]: wave14 s_cbranch_vccz taken branch
+10867113323000: system.Shader.CUs13.wavefronts00: CU13: WF[0][0]: wave13 s_cbranch_vccz taken branch
+10867113325000: system.Shader.CUs12.wavefronts00: CU12: WF[0][0]: wave12 s_cbranch_vccz taken branch
+10867113373000: system.Shader.CUs12.wavefronts00: CU12: WF[0][0]: wave12 s_cbranch_vccz taken branch
+10867113375000: system.Shader.CUs15.wavefronts00: CU15: WF[0][0]: wave15 s_cbranch_vccz taken branch
+10867113375000: system.Shader.CUs14.wavefronts00: CU14: WF[0][0]: wave14 s_cbranch_vccz taken branch
+10867113375000: system.Shader.CUs13.wavefronts00: CU13: WF[0][0]: wave13 s_cbranch_vccz taken branch
+10867113393000: system.Shader.CUs19.wavefronts00: CU19: WF[0][0]: wave19 s_cbranch_vccz taken branch
+10867113393000: system.Shader.CUs18.wavefronts00: CU18: WF[0][0]: wave18 s_cbranch_vccz taken branch
+10867113395000: system.Shader.CUs17.wavefronts00: CU17: WF[0][0]: wave17 s_cbranch_vccz taken branch
+10867113395000: system.Shader.CUs16.wavefronts00: CU16: WF[0][0]: wave16 s_cbranch_vccz taken branch
+10867113443000: system.Shader.CUs17.wavefronts00: CU17: WF[0][0]: wave17 s_cbranch_vccz taken branch
+10867113443000: system.Shader.CUs16.wavefronts00: CU16: WF[0][0]: wave16 s_cbranch_vccz taken branch
+10867113445000: system.Shader.CUs19.wavefronts00: CU19: WF[0][0]: wave19 s_cbranch_vccz taken branch
+10867113445000: system.Shader.CUs18.wavefronts00: CU18: WF[0][0]: wave18 s_cbranch_vccz taken branch
+10867114642000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: flat_store_dword v[4:5], v1 (pc: 0x7fd1b6c06280; seqNum: 186)
+10867114642000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06288)
+10867114643000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v4, vcc_lo, v4, s25 (pc: 0x7fd1b6c06288; seqNum: 187)
+10867114643000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06290)
+10867114647000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc (pc: 0x7fd1b6c06290; seqNum: 188)
+10867114647000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06298)
+10867114648000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_branch (pc: 0x7fd1b6c06298; seqNum: 189)
+10867114648000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave1 s_branch taken branch
+10867114648000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c06254)
+10867114654000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17] (pc: 0x7fd1b6c06254; seqNum: 785)
+10867114654000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c0625c)
+10867114657000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_cbranch_vccz (pc: 0x7fd1b6c0625c; seqNum: 786)
+10867114657000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave1 s_cbranch_vccz taken branch
+10867114657000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c0629c)
+10867114665000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_mov_b64 exec, -1 (pc: 0x7fd1b6c0629c; seqNum: 797)
+10867114665000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c062a0)
+10867114666000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_mov_b32 v3, s17 (pc: 0x7fd1b6c062a0; seqNum: 798)
+10867114666000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c062a4)
+10867114670000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v2, vcc_lo, v0, s16 (pc: 0x7fd1b6c062a4; seqNum: 799)
+10867114670000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c062ac)
+10867114674000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc (pc: 0x7fd1b6c062ac; seqNum: 800)
+10867114674000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c062b4)
+10867114678000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_mov_b32 v5, s19 (pc: 0x7fd1b6c062b4; seqNum: 801)
+10867114678000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c062b8)
+10867114682000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_add_co_u32 v4, vcc_lo, v0, s18 (pc: 0x7fd1b6c062b8; seqNum: 802)
+10867114682000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c062c0)
+10867114686000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc (pc: 0x7fd1b6c062c0; seqNum: 803)
+10867114686000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c062c8)
+10867114690000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: v_cmp_lt_u64 s[106:107], v[2:3], s[20:21] (pc: 0x7fd1b6c062c8; seqNum: 804)
+10867114690000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c062d0)
+10867114693000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_cbranch_vccz (pc: 0x7fd1b6c062d0; seqNum: 805)
+10867114693000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave1 s_cbranch_vccz taken branch
+10867114693000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c062ec)
+10867114849000: system.Shader.CUs17.wavefronts00: CU17: WF[0][0]: wave17 s_branch taken branch
+10867114849000: system.Shader.CUs16.wavefronts00: CU16: WF[0][0]: wave16 s_branch taken branch
+10867114858000: system.Shader.CUs10.wavefronts00: CU10: WF[0][0]: wave10 s_branch taken branch
+10867114858000: system.Shader.CUs16.wavefronts00: CU16: WF[0][0]: wave16 s_cbranch_vccz taken branch
+10867114858000: system.Shader.CUs17.wavefronts00: CU17: WF[0][0]: wave17 s_cbranch_vccz taken branch
+10867114867000: system.Shader.CUs10.wavefronts00: CU10: WF[0][0]: wave10 s_cbranch_vccz taken branch
+10867114892000: system.Shader.CUs16.wavefronts00: CU16: WF[0][0]: wave16 s_cbranch_vccz taken branch
+10867114892000: system.Shader.CUs17.wavefronts00: CU17: WF[0][0]: wave17 s_cbranch_vccz taken branch
+10867114901000: system.Shader.CUs10.wavefronts00: CU10: WF[0][0]: wave10 s_cbranch_vccz taken branch
+10867114919000: system.Shader.CUs19.wavefronts00: CU19: WF[0][0]: wave19 s_branch taken branch
+10867114919000: system.Shader.CUs18.wavefronts00: CU18: WF[0][0]: wave18 s_branch taken branch
+10867114928000: system.Shader.CUs11.wavefronts00: CU11: WF[0][0]: wave11 s_branch taken branch
+10867114928000: system.Shader.CUs18.wavefronts00: CU18: WF[0][0]: wave18 s_cbranch_vccz taken branch
+10867114928000: system.Shader.CUs19.wavefronts00: CU19: WF[0][0]: wave19 s_cbranch_vccz taken branch
+10867114937000: system.Shader.CUs11.wavefronts00: CU11: WF[0][0]: wave11 s_cbranch_vccz taken branch
+10867114962000: system.Shader.CUs18.wavefronts00: CU18: WF[0][0]: wave18 s_cbranch_vccz taken branch
+10867114962000: system.Shader.CUs19.wavefronts00: CU19: WF[0][0]: wave19 s_cbranch_vccz taken branch
+10867114971000: system.Shader.CUs11.wavefronts00: CU11: WF[0][0]: wave11 s_cbranch_vccz taken branch
+10867114998000: system.Shader.CUs12.wavefronts00: CU12: WF[0][0]: wave12 s_branch taken branch
+10867115007000: system.Shader.CUs12.wavefronts00: CU12: WF[0][0]: wave12 s_cbranch_vccz taken branch
+10867115041000: system.Shader.CUs12.wavefronts00: CU12: WF[0][0]: wave12 s_cbranch_vccz taken branch
+10867115068000: system.Shader.CUs13.wavefronts00: CU13: WF[0][0]: wave13 s_branch taken branch
+10867115068000: system.Shader.CUs14.wavefronts00: CU14: WF[0][0]: wave14 s_branch taken branch
+10867115068000: system.Shader.CUs15.wavefronts00: CU15: WF[0][0]: wave15 s_branch taken branch
+10867115077000: system.Shader.CUs15.wavefronts00: CU15: WF[0][0]: wave15 s_cbranch_vccz taken branch
+10867115077000: system.Shader.CUs14.wavefronts00: CU14: WF[0][0]: wave14 s_cbranch_vccz taken branch
+10867115077000: system.Shader.CUs13.wavefronts00: CU13: WF[0][0]: wave13 s_cbranch_vccz taken branch
+10867115111000: system.Shader.CUs15.wavefronts00: CU15: WF[0][0]: wave15 s_cbranch_vccz taken branch
+10867115111000: system.Shader.CUs14.wavefronts00: CU14: WF[0][0]: wave14 s_cbranch_vccz taken branch
+10867115111000: system.Shader.CUs13.wavefronts00: CU13: WF[0][0]: wave13 s_cbranch_vccz taken branch
+10867116190000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] Executing inst: s_endpgm (pc: 0x7fd1b6c062ec; seqNum: 831)
+10867116190000: system.Shader.CUs01.wavefronts00: CU1: WF[0][0]: wave[1] (pc: 0x7fd1b6c062f0)

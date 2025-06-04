@@ -1,0 +1,91 @@
+O3PipeView:fetch:78500:0x0001057a:0:3:auipc a0, 0
+O3PipeView:decode:0
+O3PipeView:rename:0
+O3PipeView:dispatch:0
+O3PipeView:issue:0
+O3PipeView:complete:0
+O3PipeView:retire:0:store:0
+O3PipeView:fetch:78500:0x00010578:0:2:c_mv a5, a0
+O3PipeView:decode:0
+O3PipeView:rename:0
+O3PipeView:dispatch:0
+O3PipeView:issue:0
+O3PipeView:complete:0
+O3PipeView:retire:0:store:0
+O3PipeView:fetch:78500:0x00010574:0:1:jal ra, 34
+O3PipeView:decode:79000
+O3PipeView:rename:79500
+O3PipeView:dispatch:80500
+O3PipeView:issue:80500
+O3PipeView:complete:81000
+O3PipeView:retire:82000:store:0
+O3PipeView:fetch:130500:0x0001059e:0:6:c_jr ra
+O3PipeView:decode:131000
+O3PipeView:rename:131500
+O3PipeView:dispatch:132500
+O3PipeView:issue:132500
+O3PipeView:complete:133000
+O3PipeView:retire:134500:store:0
+O3PipeView:fetch:130500:0x00010596:0:4:auipc gp, 207
+O3PipeView:decode:131000
+O3PipeView:rename:131500
+O3PipeView:dispatch:132500
+O3PipeView:issue:132500
+O3PipeView:complete:133000
+O3PipeView:retire:134000:store:0
+O3PipeView:fetch:130500:0x0001059a:0:5:addi gp, gp, 26
+O3PipeView:decode:131000
+O3PipeView:rename:131500
+O3PipeView:dispatch:132500
+O3PipeView:issue:133000
+O3PipeView:complete:133500
+O3PipeView:retire:134500:store:0
+O3PipeView:fetch:131500:0x0001057a:0:8:auipc a0, 0
+O3PipeView:decode:132000
+O3PipeView:rename:132500
+O3PipeView:dispatch:133500
+O3PipeView:issue:133500
+O3PipeView:complete:134000
+O3PipeView:retire:135000:store:0
+O3PipeView:fetch:131500:0x00010578:0:7:c_mv a5, a0
+O3PipeView:decode:132000
+O3PipeView:rename:132500
+O3PipeView:dispatch:133500
+O3PipeView:issue:133500
+O3PipeView:complete:134000
+O3PipeView:retire:135000:store:0
+O3PipeView:fetch:135500:0x0001059e:0:20:c_jr ra
+O3PipeView:decode:0
+O3PipeView:rename:0
+O3PipeView:dispatch:0
+O3PipeView:issue:0
+O3PipeView:complete:0
+O3PipeView:retire:0:store:0
+O3PipeView:fetch:135500:0x0001059a:0:19:addi gp, gp, 26
+O3PipeView:decode:0
+O3PipeView:rename:0
+O3PipeView:dispatch:0
+O3PipeView:issue:0
+O3PipeView:complete:0
+O3PipeView:retire:0:store:0
+O3PipeView:fetch:135500:0x00010596:0:18:auipc gp, 207
+O3PipeView:decode:0
+O3PipeView:rename:0
+O3PipeView:dispatch:0
+O3PipeView:issue:0
+O3PipeView:complete:0
+O3PipeView:retire:0:store:0
+O3PipeView:fetch:135500:0x00010594:0:17:c_ebreak
+O3PipeView:decode:0
+O3PipeView:rename:0
+O3PipeView:dispatch:0
+O3PipeView:issue:0
+O3PipeView:complete:0
+O3PipeView:retire:0:store:0
+O3PipeView:fetch:135000:0x0001057e:0:9:addi a0, a0, -346
+O3PipeView:decode:135500
+O3PipeView:rename:136000
+O3PipeView:dispatch:137000
+O3PipeView:issue:137000
+O3PipeView:complete:137500
+O3PipeView:retire:138500:store:0

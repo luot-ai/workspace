@@ -1,0 +1,322 @@
+10867111706000: system.Shader.CUs01.ScheduleStage: schList[7]: Adding: SIMD[0] WV[1]: 1: s_load_dwordx4 s[4:7], s[0:1], 0x00
+10867111706000: system.Shader.CUs01.ScheduleStage: schList[7]: Added: SIMD[0] WV[1]: 1: s_load_dwordx4 s[4:7], s[0:1], 0x00
+10867111706000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 1: s_load_dwordx4 s[4:7], s[0:1], 0x00
+10867111707000: system.Shader.CUs01.ScheduleStage: schList[7]: Adding: SIMD[0] WV[1]: 2: s_load_dwordx4 s[8:11], s[0:1], 0x10
+10867111707000: system.Shader.CUs01.ScheduleStage: schList[7]: Added: SIMD[0] WV[1]: 2: s_load_dwordx4 s[8:11], s[0:1], 0x10
+10867111707000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 2: s_load_dwordx4 s[8:11], s[0:1], 0x10
+10867111708000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 2: s_load_dwordx4 s[8:11], s[0:1], 0x10
+10867111709000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 2: s_load_dwordx4 s[8:11], s[0:1], 0x10
+10867111710000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 2: s_load_dwordx4 s[8:11], s[0:1], 0x10
+10867111711000: system.Shader.CUs01.ScheduleStage: schList[7]: Adding: SIMD[0] WV[1]: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111711000: system.Shader.CUs01.ScheduleStage: schList[7]: Added: SIMD[0] WV[1]: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111711000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111712000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111713000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111714000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111715000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111716000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111717000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111718000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111719000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111720000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111721000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111722000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111723000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111724000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111725000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111726000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 3: s_load_dwordx4 s[12:15], s[0:1], 0x20
+10867111727000: system.Shader.CUs01.ScheduleStage: schList[7]: Adding: SIMD[0] WV[1]: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111727000: system.Shader.CUs01.ScheduleStage: schList[7]: Added: SIMD[0] WV[1]: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111727000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111728000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111729000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111730000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111731000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111732000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111733000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111734000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111735000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111736000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111737000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111738000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111739000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111740000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111741000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111742000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 4: s_load_dwordx4 s[16:19], s[0:1], 0x30
+10867111743000: system.Shader.CUs01.ScheduleStage: schList[7]: Adding: SIMD[0] WV[1]: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111743000: system.Shader.CUs01.ScheduleStage: schList[7]: Added: SIMD[0] WV[1]: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111743000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111744000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111745000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111746000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111747000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111748000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111749000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111750000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111751000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111752000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111753000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111754000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111755000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111756000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111757000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111758000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 5: s_load_dwordx4 s[20:23], s[0:1], 0x40
+10867111759000: system.Shader.CUs01.ScheduleStage: schList[7]: Adding: SIMD[0] WV[1]: 6: s_load_dword s24, s[0:1], 0x50
+10867111759000: system.Shader.CUs01.ScheduleStage: schList[7]: Added: SIMD[0] WV[1]: 6: s_load_dword s24, s[0:1], 0x50
+10867111759000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111760000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111761000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111762000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111763000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111764000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111765000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111766000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111767000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111768000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111769000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111770000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111771000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111772000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111773000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111774000: system.Shader.CUs01.ScheduleStage: schList[7]: WV[1] operands ready for: 6: s_load_dword s24, s[0:1], 0x50
+10867111775000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 7: s_waitcnt lgkmcnt(0)
+10867111775000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 7: s_waitcnt lgkmcnt(0)
+10867111775000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 7: s_waitcnt lgkmcnt(0)
+10867113078000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 8: s_lshl_b32 s2, s2, 6
+10867113078000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 8: s_lshl_b32 s2, s2, 6
+10867113078000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 8: s_lshl_b32 s2, s2, 6
+10867113081000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 9: v_add_co_u32 v0, vcc, s2, v0
+10867113081000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 9: v_add_co_u32 v0, vcc, s2, v0
+10867113081000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 9: v_add_co_u32 v0, vcc, s2, v0
+10867113082000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 37: v_mov_b32 v3, s5
+10867113082000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 37: v_mov_b32 v3, s5
+10867113082000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 37: v_mov_b32 v3, s5
+10867113083000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 37: v_mov_b32 v3, s5
+10867113084000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 37: v_mov_b32 v3, s5
+10867113085000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 37: v_mov_b32 v3, s5
+10867113086000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 38: v_add_co_u32 v2, vcc_lo, v0, s4
+10867113086000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 38: v_add_co_u32 v2, vcc_lo, v0, s4
+10867113086000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 38: v_add_co_u32 v2, vcc_lo, v0, s4
+10867113087000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 38: v_add_co_u32 v2, vcc_lo, v0, s4
+10867113088000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 38: v_add_co_u32 v2, vcc_lo, v0, s4
+10867113089000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 38: v_add_co_u32 v2, vcc_lo, v0, s4
+10867113092000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 39: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113092000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 39: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113092000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 39: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113093000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 39: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113094000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 40: v_mov_b32 v5, s7
+10867113094000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 40: v_mov_b32 v5, s7
+10867113094000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 40: v_mov_b32 v5, s7
+10867113095000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 40: v_mov_b32 v5, s7
+10867113096000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 40: v_mov_b32 v5, s7
+10867113097000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 40: v_mov_b32 v5, s7
+10867113098000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 53: v_add_co_u32 v4, vcc_lo, v0, s6
+10867113098000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 53: v_add_co_u32 v4, vcc_lo, v0, s6
+10867113098000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 53: v_add_co_u32 v4, vcc_lo, v0, s6
+10867113099000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 53: v_add_co_u32 v4, vcc_lo, v0, s6
+10867113100000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 53: v_add_co_u32 v4, vcc_lo, v0, s6
+10867113101000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 53: v_add_co_u32 v4, vcc_lo, v0, s6
+10867113104000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 54: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113104000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 54: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113104000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 54: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113105000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 54: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113108000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 58: v_cmp_lt_u64 s[106:107], v[2:3], s[8:9]
+10867113108000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 58: v_cmp_lt_u64 s[106:107], v[2:3], s[8:9]
+10867113108000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 58: v_cmp_lt_u64 s[106:107], v[2:3], s[8:9]
+10867113109000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 58: v_cmp_lt_u64 s[106:107], v[2:3], s[8:9]
+10867113112000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 62: s_cbranch_vccz
+10867113112000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 62: s_cbranch_vccz
+10867113112000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 62: s_cbranch_vccz
+10867113118000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 77: s_mov_b64 exec, -1
+10867113118000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 77: s_mov_b64 exec, -1
+10867113118000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 77: s_mov_b64 exec, -1
+10867113119000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 78: s_lshl_b32 s25, s24, 4
+10867113119000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 78: s_lshl_b32 s25, s24, 4
+10867113119000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 78: s_lshl_b32 s25, s24, 4
+10867113120000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 78: s_lshl_b32 s25, s24, 4
+10867113121000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 78: s_lshl_b32 s25, s24, 4
+10867113122000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 78: s_lshl_b32 s25, s24, 4
+10867113123000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 79: v_lshlrev_b32 v1, 4, v0
+10867113123000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 79: v_lshlrev_b32 v1, 4, v0
+10867113123000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 79: v_lshlrev_b32 v1, 4, v0
+10867113124000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 80: v_mov_b32 v3, s9
+10867113124000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 80: v_mov_b32 v3, s9
+10867113124000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 80: v_mov_b32 v3, s9
+10867113125000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 80: v_mov_b32 v3, s9
+10867113126000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 80: v_mov_b32 v3, s9
+10867113127000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 80: v_mov_b32 v3, s9
+10867113128000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 81: v_add_co_u32 v2, vcc_lo, v1, s8
+10867113128000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 81: v_add_co_u32 v2, vcc_lo, v1, s8
+10867113128000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 81: v_add_co_u32 v2, vcc_lo, v1, s8
+10867113129000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 81: v_add_co_u32 v2, vcc_lo, v1, s8
+10867113130000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 81: v_add_co_u32 v2, vcc_lo, v1, s8
+10867113131000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 81: v_add_co_u32 v2, vcc_lo, v1, s8
+10867113134000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 82: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113134000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 82: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113134000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 82: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113135000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 82: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113136000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 83: v_mov_b32 v5, s11
+10867113136000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 83: v_mov_b32 v5, s11
+10867113136000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 83: v_mov_b32 v5, s11
+10867113137000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 83: v_mov_b32 v5, s11
+10867113138000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 83: v_mov_b32 v5, s11
+10867113139000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 83: v_mov_b32 v5, s11
+10867113140000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 84: v_add_co_u32 v4, vcc_lo, v1, s10
+10867113140000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 84: v_add_co_u32 v4, vcc_lo, v1, s10
+10867113140000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 84: v_add_co_u32 v4, vcc_lo, v1, s10
+10867113141000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 84: v_add_co_u32 v4, vcc_lo, v1, s10
+10867113142000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 84: v_add_co_u32 v4, vcc_lo, v1, s10
+10867113143000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 84: v_add_co_u32 v4, vcc_lo, v1, s10
+10867113146000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 85: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113146000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 85: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113146000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 85: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113147000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 85: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113150000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 86: v_cmp_lt_u64 s[106:107], v[2:3], s[12:13]
+10867113150000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 86: v_cmp_lt_u64 s[106:107], v[2:3], s[12:13]
+10867113150000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 86: v_cmp_lt_u64 s[106:107], v[2:3], s[12:13]
+10867113151000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 86: v_cmp_lt_u64 s[106:107], v[2:3], s[12:13]
+10867113154000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 87: s_cbranch_vccz
+10867113154000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 87: s_cbranch_vccz
+10867113154000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113155000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113156000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113157000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113158000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113159000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113160000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113161000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113162000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113163000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113164000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 87: s_cbranch_vccz
+10867113170000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 129: s_lshl_b32 s25, s24, 2
+10867113170000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 129: s_lshl_b32 s25, s24, 2
+10867113170000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 129: s_lshl_b32 s25, s24, 2
+10867113171000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 130: v_lshlrev_b32 v1, 2, v0
+10867113171000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 130: v_lshlrev_b32 v1, 2, v0
+10867113171000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 130: v_lshlrev_b32 v1, 2, v0
+10867113172000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 131: v_mov_b32 v3, s13
+10867113172000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 131: v_mov_b32 v3, s13
+10867113172000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 131: v_mov_b32 v3, s13
+10867113173000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 131: v_mov_b32 v3, s13
+10867113174000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 131: v_mov_b32 v3, s13
+10867113175000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 131: v_mov_b32 v3, s13
+10867113176000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 132: v_add_co_u32 v2, vcc_lo, v1, s12
+10867113176000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 132: v_add_co_u32 v2, vcc_lo, v1, s12
+10867113176000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 132: v_add_co_u32 v2, vcc_lo, v1, s12
+10867113177000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 132: v_add_co_u32 v2, vcc_lo, v1, s12
+10867113178000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 132: v_add_co_u32 v2, vcc_lo, v1, s12
+10867113179000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 132: v_add_co_u32 v2, vcc_lo, v1, s12
+10867113182000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 133: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113182000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 133: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113182000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 133: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113183000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 133: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113184000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 134: v_mov_b32 v5, s15
+10867113184000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 134: v_mov_b32 v5, s15
+10867113184000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 134: v_mov_b32 v5, s15
+10867113185000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 134: v_mov_b32 v5, s15
+10867113186000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 134: v_mov_b32 v5, s15
+10867113187000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 134: v_mov_b32 v5, s15
+10867113188000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 135: v_add_co_u32 v4, vcc_lo, v1, s14
+10867113188000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 135: v_add_co_u32 v4, vcc_lo, v1, s14
+10867113188000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 135: v_add_co_u32 v4, vcc_lo, v1, s14
+10867113189000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 135: v_add_co_u32 v4, vcc_lo, v1, s14
+10867113190000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 135: v_add_co_u32 v4, vcc_lo, v1, s14
+10867113191000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 135: v_add_co_u32 v4, vcc_lo, v1, s14
+10867113194000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 136: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113194000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 136: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113194000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 136: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113195000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 136: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867113198000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 137: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+10867113198000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 137: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+10867113198000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 137: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+10867113199000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 137: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+10867113202000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 138: s_cbranch_vccz
+10867113202000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 138: s_cbranch_vccz
+10867113202000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 138: s_cbranch_vccz
+10867113203000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 138: s_cbranch_vccz
+10867113204000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 138: s_cbranch_vccz
+10867113205000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 139: s_and_b64 exec, exec, vcc_lo
+10867113205000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 139: s_and_b64 exec, exec, vcc_lo
+10867113205000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 139: s_and_b64 exec, exec, vcc_lo
+10867113206000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 139: s_and_b64 exec, exec, vcc_lo
+10867113207000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 139: s_and_b64 exec, exec, vcc_lo
+10867113208000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 139: s_and_b64 exec, exec, vcc_lo
+10867113209000: system.Shader.CUs01.ScheduleStage: schList[5]: Adding: SIMD[0] WV[1]: 140: flat_load_dword v1, v[2:3]
+10867113209000: system.Shader.CUs01.ScheduleStage: schList[5]: Added: SIMD[0] WV[1]: 140: flat_load_dword v1, v[2:3]
+10867113209000: system.Shader.CUs01.ScheduleStage: schList[5]: WV[1] operands ready for: 140: flat_load_dword v1, v[2:3]
+10867113210000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 141: v_add_co_u32 v2, vcc_lo, v2, s25
+10867113210000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 141: v_add_co_u32 v2, vcc_lo, v2, s25
+10867113210000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 141: v_add_co_u32 v2, vcc_lo, v2, s25
+10867113213000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 142: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113213000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 142: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113213000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 142: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113214000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 142: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867113215000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 185: s_waitcnt vmcnt(0)
+10867113215000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 185: s_waitcnt vmcnt(0)
+10867113215000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 185: s_waitcnt vmcnt(0)
+10867113216000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 185: s_waitcnt vmcnt(0)
+10867113217000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 185: s_waitcnt vmcnt(0)
+10867113218000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 185: s_waitcnt vmcnt(0)
+10867114641000: system.Shader.CUs01.ScheduleStage: schList[5]: Adding: SIMD[0] WV[1]: 186: flat_store_dword v[4:5], v1
+10867114641000: system.Shader.CUs01.ScheduleStage: schList[5]: Added: SIMD[0] WV[1]: 186: flat_store_dword v[4:5], v1
+10867114641000: system.Shader.CUs01.ScheduleStage: schList[5]: WV[1] operands ready for: 186: flat_store_dword v[4:5], v1
+10867114642000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 187: v_add_co_u32 v4, vcc_lo, v4, s25
+10867114642000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 187: v_add_co_u32 v4, vcc_lo, v4, s25
+10867114642000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 187: v_add_co_u32 v4, vcc_lo, v4, s25
+10867114645000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 188: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867114645000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 188: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867114645000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 188: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867114646000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 188: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867114647000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 189: s_branch
+10867114647000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 189: s_branch
+10867114647000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 189: s_branch
+10867114653000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 785: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+10867114653000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 785: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+10867114653000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 785: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+10867114656000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 786: s_cbranch_vccz
+10867114656000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 786: s_cbranch_vccz
+10867114656000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 786: s_cbranch_vccz
+10867114662000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 797: s_mov_b64 exec, -1
+10867114662000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 797: s_mov_b64 exec, -1
+10867114662000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 797: s_mov_b64 exec, -1
+10867114663000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 797: s_mov_b64 exec, -1
+10867114664000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 797: s_mov_b64 exec, -1
+10867114665000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 798: v_mov_b32 v3, s17
+10867114665000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 798: v_mov_b32 v3, s17
+10867114665000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 798: v_mov_b32 v3, s17
+10867114666000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 799: v_add_co_u32 v2, vcc_lo, v0, s16
+10867114666000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 799: v_add_co_u32 v2, vcc_lo, v0, s16
+10867114666000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 799: v_add_co_u32 v2, vcc_lo, v0, s16
+10867114667000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 799: v_add_co_u32 v2, vcc_lo, v0, s16
+10867114668000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 799: v_add_co_u32 v2, vcc_lo, v0, s16
+10867114669000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 799: v_add_co_u32 v2, vcc_lo, v0, s16
+10867114672000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 800: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867114672000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 800: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867114672000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 800: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867114673000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 800: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+10867114674000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 801: v_mov_b32 v5, s19
+10867114674000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 801: v_mov_b32 v5, s19
+10867114674000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 801: v_mov_b32 v5, s19
+10867114675000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 801: v_mov_b32 v5, s19
+10867114676000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 801: v_mov_b32 v5, s19
+10867114677000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 801: v_mov_b32 v5, s19
+10867114678000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 802: v_add_co_u32 v4, vcc_lo, v0, s18
+10867114678000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 802: v_add_co_u32 v4, vcc_lo, v0, s18
+10867114678000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 802: v_add_co_u32 v4, vcc_lo, v0, s18
+10867114679000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 802: v_add_co_u32 v4, vcc_lo, v0, s18
+10867114680000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 802: v_add_co_u32 v4, vcc_lo, v0, s18
+10867114681000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 802: v_add_co_u32 v4, vcc_lo, v0, s18
+10867114684000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 803: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867114684000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 803: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867114684000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 803: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867114685000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 803: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+10867114688000: system.Shader.CUs01.ScheduleStage: schList[0]: Adding: SIMD[0] WV[1]: 804: v_cmp_lt_u64 s[106:107], v[2:3], s[20:21]
+10867114688000: system.Shader.CUs01.ScheduleStage: schList[0]: Added: SIMD[0] WV[1]: 804: v_cmp_lt_u64 s[106:107], v[2:3], s[20:21]
+10867114688000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 804: v_cmp_lt_u64 s[106:107], v[2:3], s[20:21]
+10867114689000: system.Shader.CUs01.ScheduleStage: schList[0]: WV[1] operands ready for: 804: v_cmp_lt_u64 s[106:107], v[2:3], s[20:21]
+10867114692000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 805: s_cbranch_vccz
+10867114692000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 805: s_cbranch_vccz
+10867114692000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 805: s_cbranch_vccz
+10867116189000: system.Shader.CUs01.ScheduleStage: schList[4]: Adding: SIMD[0] WV[1]: 831: s_endpgm
+10867116189000: system.Shader.CUs01.ScheduleStage: schList[4]: Added: SIMD[0] WV[1]: 831: s_endpgm
+10867116189000: system.Shader.CUs01.ScheduleStage: schList[4]: WV[1] operands ready for: 831: s_endpgm
