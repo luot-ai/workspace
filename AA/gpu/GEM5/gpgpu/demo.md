@@ -133,6 +133,10 @@
     5. GPU显存内容、cache内容
 * 使用 `--restore-dir`从特定目录下恢复
 
+  ```
+  build/VEGA_X86/gem5.opt configs/example/gpufs/mi300.py --disk-image gem5-resources/src/x86-ubuntu-gpu-ml/disk-image/x86-ubuntu-gpu-ml --kernel gem5-resources/src/x86-ubuntu-gpu-ml/vmlinux-gpu-ml --app gem5-resources/src/gpu/square/bin.default/square.default --restore-dir square-cpt
+  ```
+
 ### 运行Pytorch
 
 * 代码

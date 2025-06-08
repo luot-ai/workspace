@@ -150,7 +150,7 @@
 
 ## 2.2  CU
 
-![Alt text](picture\image-cu.png)
+![Alt text](picture/image-cu.png)
 
 1. **静态信息 `compute_unit.hh`**：
    ```C++
@@ -241,7 +241,7 @@
 * `3ScoreboardCheckStag::exec`:
 
   * 遍历所有 `wf`槽
-  * `ready`:检查该wavefront `指令buffer`中的指令是否就绪
+  * `ready`:检查该wavefront `指令buffer`第一条指令是否就绪
   * 若就绪，则 `_readyWFs[func_unit_id].push_back(wf)`
     * 这个数据结构是 `toSchedule`中的一员，会在下一周期被schedule模块使用
     * 保存了不同功能单元对应的readyWFs
@@ -262,17 +262,78 @@
     6. 如果是 MFMA（矩阵指令），需要等 matrix core 可用
     7. 最后设置 `*exeResType = mapWaveToExeUnit(w)`，表示准备在哪种执行单元上运行（ALU / LOAD / …）
   * ![1747576748341](image/arch(2)/1747576748341.png)
-* `4ScheduleStage::exec()`：遍历CU中的所有部件
 
-  * 如果某WF已有一条正在读寄存器的指令，就不允许该WF后续指令发射：从就绪队列中删除
-  * 尝试添加一个Wavefront的指令进入**某一部件的调度队列** `schlist`:
-    * `Wavefront*wf=scheduler[j].chooseWave();`：越老的wfDynId越优先
-    * 尝试 `addToSchList`：该wf对应的寄存器文件是否 `canScheduleReadOperands`（看起来是恒true）
-      * `schList.at(exeType).push_back(std::make_pair(gpu_dyn_inst, RFBUSY));`：寄存器读取结束后这里的状态才会被置为 `SCHREADY`
-    * 优先遍历 VMEM 类型的 wave：考虑到VRF的读取限制（这里很奇怪，竟然还没有实现相应的限制）
-      * `for (intj=firstMemUnit; j<=lastMemUnit; j++)`
-      * scalar mem 的调度优先级在 VMEM 之后
+* `4ScheduleStage::exec()`：遍历各FU对应的**readyWFs**，尝试添加到该FU对应的**schlist->dispatchInst**
+  1. **某一部件的调度队列** `schlist`
+      - 每条指令对应两种状态RFBUSY->RFREADY
+      - 状态为RFREADY的**队头**指令下一周期会被执行
+  2. **各部件执行级状态** `dispatchStatus`
+      - 所有部件的`dispatchStatus`构成一个list：
+      - 状态包括`empty`和`exeReady`
+        ![Alt text](picture/dumpDp.png)
+  3. **函数执行过程【curCycle执行完成】**
+      1. 检查：该WF是否已经在`schlist`中，若是则说明该WF已有一条等待读寄存器的指令。为了保证不乱序执行，将该WF从就绪队列中删除
+         1. 指令在`execStage`离开`schlist`
+      2. 尝试添加一个Wavefront的指令进入`schlist`:
+           * `Wavefront*wf=scheduler[j].chooseWave();`：越老的wfDynId越优先
+           * 尝试 `addToSchList`：该wf对应的寄存器文件是否 `canScheduleReadOperands`（目前实现是恒true）
+           * `schList.at(exeType).push_back(std::make_pair(gpu_dyn_inst, RFBUSY));`
+            - 执行该步骤时的优先级
+               * 优先遍历 VMEM 类型的 wave：考虑到VRF的读取限制（这里很奇怪，竟然还没有实现相应的限制）`for (intj=firstMemUnit; j<=lastMemUnit; j++)`
+               * scalar mem 的调度优先级在 VMEM 之后
+      3. checkRfOperandReadComplete()：检查schlist中的所有指令是否已经读完操作数，读完将状态设置为RFREADY(这里实现为恒true)
+      4. **fillDispatchList()**：见下
+      5. arbitrateVrfToLdsBus()：Flat指令会预留GM+LM，已经预留GM的Flat指令比其他指令使用LDS的优先级更高
+      6. scheduleRfDestOperands()：**指令将它们的目的寄存器标为busy**
+      7. reserveResources()：据指令类型设置需要reserve的资源，可能是多个【主要是针对flat指令需要预留两个FU】
+* `4ScheduleStage::fillDispatchList()`：
+  * 检查每一个FU对应的`schlist`中，是否有下一周期可被执行的WF
+    * 最多只允许一个
+    * 一个WF最多只会出现在一个`schlist`
+  * 首先检查WF是否已经`RFReady`(目前的实现是所有WF都可以满足这个要求)
+  * 最后依据指令类型检查需要的执行部件是否就绪
+    * 计算类
+      * vALU
+      * sALU 
+    * 访存类
+      * 这里的issue指的是下一周期是否可发射（每周期只可发射一条）
+      * 这里的RF->M指的是下一周期bus是否可用（only 1 can use）
+      * queue指的是**FIFO里尚未处理的请求+已经发送pending的请求**
+        * vector gm：GM_issue VRF->GM GM合并槽 wave最大可访存数量
+        * scalar gm: SM_issue SRF->SM SM-queue
+        * vector lm：LM_issue VRF->LM  LM-queue
 
-### 2.2.4.  ReadOperands
 
+### 2.2.3.  ExecStage5
+
+#### 1. ExecStage::exec()
+- 根据各个FU是否有`dispatchStatus`
+- 对于`exeReady`的FU：
+  - 调用`wf->exec()`
+  - 将指令从`schlist`中删除
+  - 转移`dispatchStatus`为empty
+
+##### 1.1 Wavefront::exec()
+
+- 取IB队头指令调用 dynInst->exec()
+- 设定指定周期后目的寄存器变为free（对应scheduleRfDestOperands将目的寄存器标为busy）
+![Alt text](picture/wfexec.png)
+- 根据指令类型设置**资源延迟**（对应fillDispatchList中最后一步的检查）
+  - vAlu和sAlu设置为issuePeriod=4
+  - vrfToGlobalMemPipeBus->1 vectorGlobalMemUnit->issuePeriod4+
+  - vrfToLocalMemPipeBus->1  vectorSharedMemUnit->issuePeriod4
+  - srfToScalarMemPipeBus->1 scalarMemUnit->issuePeriod4
+
+##### 1.2 dynInst::exec()指令的执行函数
+![Alt text](picture/iiexec.png)
+###### 读写操作数
+- 可索引2048(可配置)个物理寄存器组
+- 每个寄存器组包含64个32bit寄存器，组合相邻的寄存器可得到64/128bit
+- 静态映射机制
+  - 每个WF映射到一个startIndex
+  - 从该索引开始对应它的架构寄存器号
 ![1747581044943](image/arch(2)/1747581044943.png)
+
+### 2.2.4.  MemPipeLine
+- see [this](../PPT/Gem5-GPU_3.pptx) for detail
+
