@@ -7,11 +7,11 @@ def parse_trace_file(input_path, output_path, raw_output_path):
     with open(input_path, 'r') as f:
         lines = f.readlines()
 
-    A = []  # 存储 (aligned_cacheline_addr, tick)
-    B = []  # 用于流水线可视化
-    C = []  # 某一wf的raw trace
+    A = []  
+    B = []  
+    C = []  
 
-    # 第一步：构建 A 列表
+    # 第一步：构建 取指信息列表
     pattern_fetch = re.compile(
         r'(?P<tick>\d+): CU(?P<cu>\d+): WF\[(?P<simd_id>\d+)\]\[(?P<wf_slot>\d+)\]: Id(?P<wf_id>\d+): Initiate fetch from pc: (?P<pc>\d+), tlb translation for cache line addr: (?P<addr>0x[0-9a-fA-F]+)'
     )
@@ -19,111 +19,117 @@ def parse_trace_file(input_path, output_path, raw_output_path):
     for line in lines:
         m = pattern_fetch.match(line)
         if m:
-            if m.group("simd_id") != "0" or m.group("wf_slot") != "0" or m.group("wf_id") != "1":
-                continue  # 不符合 WF[0][0]:wave[1] 就跳过
+            if m.group("simd_id") != "0" or m.group("wf_slot") != "0" or m.group("wf_id") != "1": #匹配特定wave
+                continue  
             addr = m.group("addr").lower()
             tick = m.group("tick")
-            #print(f"[✓] 处理地址: {addr} (tick: {tick})")
             A.append((addr, tick))
 
-    # 第二步：匹配执行指令和阶段
+    # 第二步：匹配 执行指令和阶段
     pattern_exec = re.compile(
         r'.*WF\[(?P<simd_id>\d+)\]\[(?P<wf_slot>\d+)\]: wave\[(?P<wf_id>\d+)\] Executing inst: (?P<assm>.+?) \(pc: (?P<pc>0x[0-9a-fA-F]+); seqNum: (?P<seqnum>\d+)\)'
     )
 
+    # example: x is actually the cycle of requesting cache
+    #     tlbReturn:0,schedule cache req after x cycle
+    #     reqCache:x
+    #     cacheResp:x
+    #     mc:x+1
     stage_patterns = {
-        'decode': re.compile(r'GPUView:decode:(\d+)'),
-        'scb': re.compile(r'GPUView:scb:(\d+)'),
-        'sch': re.compile(r'GPUView:sch:(\d+)'),
-        'issue': re.compile(r'GPUView:issue:(\d+)'),
-        'macc': re.compile(r'GPUView:macc:(\d+)'),
-        'stlbReturn': re.compile(r'GPUView:stlbReturn:(\d+)'),
-        'reqScache': re.compile(r'GPUView:reqScache:(\d+)'),
-        'ScacheResp': re.compile(r'GPUView:ScacheResp:(\d+)'),
-        'dtlbReturn': re.compile(r'GPUView:dtlbReturn: (\d+)'),
-        'reqTcp': re.compile(r'GPUView:reqTcp: (\d+)'),
-        'tcpResp': re.compile(r'GPUView:tcpResp: (\d+)'),
-        'mc': re.compile(r'GPUView:mc:(\d+)'),
+        'decode': (re.compile(r'GPUView:decode:(\d+)'), 'decode'),
+        'scb': (re.compile(r'GPUView:scb:(\d+)'), 'scb'),
+        'sch': (re.compile(r'GPUView:sch:(\d+)'), 'sch'),
+        'issue': (re.compile(r'GPUView:issue:(\d+)'), 'issue'),
+        'macc': (re.compile(r'GPUView:macc:(\d+)'), 'macc'),
+        'mc': (re.compile(r'GPUView:mc:(\d+)'), 'mc'),
+        # Scalar Cache
+        'stlbReturn': (re.compile(r'GPUView:stlbReturn:(\d+)'), 'tlbR'),
+        'reqScache': (re.compile(r'GPUView:reqScache:(\d+)'), 'reqCache'),
+        'ScacheResp': (re.compile(r'GPUView:ScacheResp:(\d+)'), 'cacheResp'),
+        # TCP
+        'dtlbReturn': (re.compile(r'GPUView:dtlbReturn: (\d+)'), 'tlbR'),
+        'reqTcp': (re.compile(r'GPUView:reqTcp: (\d+)'), 'reqCache'),
+        'tcpResp': (re.compile(r'GPUView:tcpResp: (\d+)'), 'cacheResp'),
     }
 
     i = 0
-    sn = 1
+    sn = 1 
     while i < len(lines):
         line = lines[i]
         m = pattern_exec.search(line)
         if m:
-            if m.group("simd_id") != "0" or m.group("wf_slot") != "0" or m.group("wf_id") != "1":
+            if m.group("simd_id") != "0" or m.group("wf_slot") != "0" or m.group("wf_id") != "1": # 匹配特定wave
                 i += 1
-                continue  # 不符合 WF[0][0]:wave[1] 就跳过
+                continue  
+            # 1:查找对应 fetchTick
             pc_raw = m.group("pc").lower()
             pc_aligned = align64(pc_raw)
             assm = m.group("assm")
             seqnum = m.group("seqnum")
-            print(f"[✓] 处理指令: {assm} (pc: {pc_raw}, seqNum: {sn})")
-            # 查找对应 tick
-            fetchtick = next((tick for addr, tick in A if addr == pc_aligned), "0")
-            # 提取阶段 tick
-            decode = scb = sch = issue = macc = tlbR = reqCache = cacheResp = mc = "0"
-            
+            fetchtick = next((tick for addr, tick in A if addr == pc_aligned), "0") 
+            # 2:提取各流水级tick
+            variables = {'decode': '0', 'scb': '0', 'sch': '0', 'issue': '0', 'macc': '0', 'mc': '0', 'tlbR': '0', 'reqCache': '0', 'cacheResp': '0'}
             j = 0
             flag = 0
-            while True:
+            while True: # 匹配接下来的若干行
                 j += 1
                 if i + j >= len(lines): break
                 l = lines[i + j]
                 ifSearch = 0
-                # 将当前行进行匹配，如果 不是[macc -> mc]之间的某行 并且 没匹配上，则break
-                for stage, pat in stage_patterns.items():
-                    s = pat.search(l)
-                    if s:
+                for stage, (pattern, var_name) in stage_patterns.items(): # 将当前行 与 某流水级正则项匹配
+                    match = pattern.search(l)
+                    if match:
                         ifSearch = 1
-                        if stage == 'decode': decode = s.group(1)
-                        elif stage == 'scb': scb = s.group(1)
-                        elif stage == 'sch': sch = s.group(1)
-                        elif stage == 'issue': issue = s.group(1)
-                        elif stage == 'macc': 
-                            macc = s.group(1)
-                            flag = 1
-                        elif stage == 'stlbReturn': tlbR = s.group(1)
-                        elif stage == 'reqScache': reqCache = s.group(1)
-                        elif stage == 'ScacheResp': cacheResp = s.group(1)
-                        elif stage == 'dtlbReturn': tlbR = s.group(1)
-                        elif stage == 'reqTcp': reqCache = s.group(1)
-                        elif stage == 'tcpResp': cacheResp = 0#cacheResp = s.group(1)
-                        elif stage == 'mc': 
-                            mc = s.group(1)
-                            flag = 0
-                if ifSearch == 0 and flag == 0:    
+                        variables[var_name] = match.group(1)
+                        if stage == 'macc': flag = 1
+                        elif stage == 'mc': flag = 0
+                if not ifSearch and not flag: #在macc和mc之间可能会有未匹配的行，允许跳过TODO
                     break
-                        
-
-            # 写入 B
-            B.append(f"O3PipeView:fetch:{int(decode)-1000}:{pc_raw}:0:{seqnum}:{assm}")
-            B.append(f"O3PipeView:decode:{decode}")
-            B.append(f"O3PipeView:rename:{scb}")
-            B.append(f"O3PipeView:dispatch:{sch}")
-            B.append(f"O3PipeView:issue:{issue}")
-            if (macc == "0"):
-                B.append(f"O3PipeView:complete:{int(issue)+4000}")
-                B.append(f"O3PipeView:retire:{int(issue)+5000}:store:0")
+            decode, scb, sch, issue, macc, mc, tlbR, reqCache, cacheResp = (
+                variables['decode'], variables['scb'], variables['sch'], variables['issue'],
+                variables['macc'], variables['mc'], variables['tlbR'], variables['reqCache'], variables['cacheResp']
+            )
+            scb = str(int(decode)+1000)
+            # 3:pipeView
+            B.extend([
+                f"O3PipeView:fetch:{int(decode)-1000}:{pc_raw}:0:{seqnum}:{assm}", #取指可以换成fetchTick
+                *[f"O3PipeView:{stage}:{value}" for stage, value in [
+                    ("decode", decode),
+                    ("rename", scb),
+                    ("dispatch", sch),
+                    ("issue", issue)
+                ]]
+            ])
+            if macc == "0":
+                B.extend([
+                    f"O3PipeView:complete:{int(issue)+4000}", #计算指令4cycle
+                    f"O3PipeView:retire:{int(issue)+5000}:store:0" #TODO
+                ])
             else:
-                B.append(f"O3PipeView:complete:{tlbR}")
-                B.append(f"O3PipeView:retire:{reqCache}:store:{mc}")
-
-            # 写入 C
-            C.append(f"\nseqnum:{seqnum}")
-            C.append(f"inst:{assm}")
-            C.append(f"fetchStart:{fetchtick},pc:{pc_raw}")
-            C.append(f"fetch:{str(int(decode)-int(fetchtick))[:-3]}")
-            C.append(f"decode:{str(int(scb)-int(decode))[:-3]}")
-            C.append(f"scb:{str(int(sch)-int(scb))[:-3]}")
-            C.append(f"sch:{str(int(issue)-int(sch))[:-3]}")
-            if (macc == "0"):
-                C.append(f"issue:{4}")
+                B.extend([
+                    f"O3PipeView:complete:{tlbR[:-3]+'000'}", # issue+tlb访问 = {tlbR-issue} ---可视化---> is阶段 = {complete-issue}
+                    f"O3PipeView:retire:{int(mc)-1000}:store:{mc}" # cache访问 = {cacheResp[:-3]+'000'-tlbR} ---可视化---> cm阶段 = {retire-complete}
+                ])
+            # 4:trace analysis
+            C.extend([
+                f"\nseqnum:{seqnum}",
+                f"inst:{assm}",
+                f"fetchStart:{fetchtick},pc:{pc_raw}",
+                *[f"{stage}:{str(int(end) - int(start))[:-3]}" for stage, start, end in [
+                    ("fetch", fetchtick, decode),
+                    ("decode", decode, scb),
+                    ("scb", scb, sch),
+                    ("sch", sch, issue)
+                ]]
+            ])
+            if macc == "0":
+                C.append("issue:4")
             else:
-                C.append(f"issue:{str(int(macc)-int(issue))[:-3]}")
-                C.append(f"tlbacc:{str(int(tlbR)-int(macc))[:-3]}")
-                C.append(f"reqCache:{str(int(cacheResp)-int(tlbR))[:-3]}")
+                C.extend([
+                    f"issue:{str(int(macc) - int(issue))[:-3]}",
+                    f"tlbacc:{str(int(tlbR) - int(macc))[:-3]}",
+                    f"reqCache:{str(int(cacheResp) - int(tlbR))[:-3]}"
+                ])
 
             i += j
             sn+=1
@@ -139,7 +145,7 @@ def parse_trace_file(input_path, output_path, raw_output_path):
         print(f"[✓] 原始输出已写入: {raw_output_path}")
     print(sn)
 
-# 示例用法：
+# 示例用法：/home/intern/luot/gem5/trace_square_pipe/trace
 parse_trace_file("traceV3", "trace.out", "trace.raw")
 
 
