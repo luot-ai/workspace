@@ -49,8 +49,8 @@ def parse_trace_file(input_path, output_path, raw_output_path):
         'tlbReq': (re.compile(r'GPUView:macc:(\d+)'), 'tlbReq'),
         'sCacheReq': (re.compile(r'GPUView:stlbReturn:(\d+)'), 'sCacheReq'),
         'sCacheResp': (re.compile(r'GPUView:ScacheResp:(\d+)'), 'sCacheResp'),
-        'dtlbReturn': (re.compile(r'GPUView:dtlbReturn:(\d+)'), 'dtlbReturn'),
-        'tcpReq': (re.compile(r'GPUView:reqTcp:(\d+):([0-9a-fA-FxX]+)'), 'tcpReq'),
+        # 'dtlbReturn': (re.compile(r'GPUView:dtlbReturn:(\d+)'), 'dtlbReturn'),
+        'tcpReq': (re.compile(r'GPUView:dtlbReturn:(\d+):([0-9a-fA-FxX]+)'), 'tcpReq'),
         'tcpResp': (re.compile(r'GPUView:tcpResp:(\d+):([0-9a-fA-FxX]+)'), 'tcpResp'),
         'tcpRespSt': (re.compile(r'GPUView:tcpRespStore:(\d+):([0-9a-fA-FxX]+)'), 'tcpRespSt'),
         'mc': (re.compile(r'GPUView:mc:(\d+)'), 'mc'),
@@ -276,7 +276,7 @@ def parse_trace_file(input_path, output_path, raw_output_path):
 
         if data['tlbReq'] == 0:
             C_sorted.append("issue:4") 
-        elif data['ifTcpSt']:
+        elif data['ifTcp']:
             time = data['tcpAccTime']
             for tc in time:
                 addr = tc[0]
