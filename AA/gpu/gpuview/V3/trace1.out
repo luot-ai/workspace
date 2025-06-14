@@ -1,413 +1,362 @@
-O3PipeView:fetch:10855948678000:0x7fd1b6c06130:0:7:s_waitcnt lgkmcnt(0)
-O3PipeView:decode:10855948679000
-O3PipeView:rename:10855948680000
-O3PipeView:dispatch:10855948750000
-O3PipeView:issue:10855948751000
-O3PipeView:complete:10855948755000
-O3PipeView:retire:10855948756000:store:0
-O3PipeView:fetch:10855948678000:0x7fd1b6c06134:0:1:s_load_dwordx4 s[4:7], s[0:1], 0x00
-O3PipeView:decode:10855948679000
-O3PipeView:rename:10855948680000
-O3PipeView:dispatch:10855948681000
-O3PipeView:issue:10855948682000
-O3PipeView:complete:10855949933000
-O3PipeView:retire:10855949983000:store:10855949984000
-O3PipeView:fetch:10855948678000:0x7fd1b6c06134:0:2:s_load_dwordx4 s[8:11], s[0:1], 0x10
-O3PipeView:decode:10855948679000
-O3PipeView:rename:10855948680000
-O3PipeView:dispatch:10855948682000
-O3PipeView:issue:10855948686000
-O3PipeView:complete:10855949937000
-O3PipeView:retire:10855949987000:store:10855949988000
-O3PipeView:fetch:10855948678000:0x7fd1b6c06134:0:3:s_load_dwordx4 s[12:15], s[0:1], 0x20
-O3PipeView:decode:10855948679000
-O3PipeView:rename:10855948680000
-O3PipeView:dispatch:10855948686000
-O3PipeView:issue:10855948702000
-O3PipeView:complete:10855949953000
-O3PipeView:retire:10855950003000:store:10855950004000
-O3PipeView:fetch:10855948678000:0x7fd1b6c06134:0:4:s_load_dwordx4 s[16:19], s[0:1], 0x30
-O3PipeView:decode:10855948679000
-O3PipeView:rename:10855948680000
-O3PipeView:dispatch:10855948702000
-O3PipeView:issue:10855948718000
-O3PipeView:complete:10855949969000
-O3PipeView:retire:10855950019000:store:10855950020000
-O3PipeView:fetch:10855948678000:0x7fd1b6c06134:0:5:s_load_dwordx4 s[20:23], s[0:1], 0x40
-O3PipeView:decode:10855948679000
-O3PipeView:rename:10855948680000
-O3PipeView:dispatch:10855948718000
-O3PipeView:issue:10855948734000
-O3PipeView:complete:10855949985000
-O3PipeView:retire:10855950035000:store:10855950036000
-O3PipeView:fetch:10855948678000:0x7fd1b6c06134:0:6:s_load_dword s24, s[0:1], 0x50
-O3PipeView:decode:10855948679000
-O3PipeView:rename:10855948680000
-O3PipeView:dispatch:10855948734000
-O3PipeView:issue:10855948750000
-O3PipeView:complete:10855950001000
-O3PipeView:retire:10855950051000:store:10855950052000
-O3PipeView:fetch:10855948678000:0x7fd1b6c06134:0:8:s_lshl_b32 s2, s2, 6
-O3PipeView:decode:10855948679000
-O3PipeView:rename:10855948680000
-O3PipeView:dispatch:10855950053000
-O3PipeView:issue:10855950054000
-O3PipeView:complete:10855950058000
-O3PipeView:retire:10855950059000:store:0
-O3PipeView:fetch:10855948678000:0x7fd1b6c06138:0:9:v_add_co_u32 v0, vcc, s2, v0
-O3PipeView:decode:10855948679000
-O3PipeView:rename:10855948680000
-O3PipeView:dispatch:10855950056000
-O3PipeView:issue:10855950057000
-O3PipeView:complete:10855950061000
-O3PipeView:retire:10855950062000:store:0
-O3PipeView:fetch:10855948680000:0x7fd1b6c0613c:0:37:v_mov_b32 v3, s5
-O3PipeView:decode:10855948681000
-O3PipeView:rename:10855948682000
-O3PipeView:dispatch:10855950057000
-O3PipeView:issue:10855950061000
-O3PipeView:complete:10855950065000
-O3PipeView:retire:10855950066000:store:0
-O3PipeView:fetch:10855948680000:0x7fd1b6c06140:0:38:v_add_co_u32 v2, vcc_lo, v0, s4
-O3PipeView:decode:10855948681000
-O3PipeView:rename:10855948682000
-O3PipeView:dispatch:10855950061000
-O3PipeView:issue:10855950065000
-O3PipeView:complete:10855950069000
-O3PipeView:retire:10855950070000:store:0
-O3PipeView:fetch:10855948680000:0x7fd1b6c06148:0:39:v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
-O3PipeView:decode:10855948681000
-O3PipeView:rename:10855948682000
-O3PipeView:dispatch:10855950067000
-O3PipeView:issue:10855950069000
-O3PipeView:complete:10855950073000
-O3PipeView:retire:10855950074000:store:0
-O3PipeView:fetch:10855948680000:0x7fd1b6c06150:0:40:v_mov_b32 v5, s7
-O3PipeView:decode:10855948681000
-O3PipeView:rename:10855948682000
-O3PipeView:dispatch:10855950069000
-O3PipeView:issue:10855950073000
-O3PipeView:complete:10855950077000
-O3PipeView:retire:10855950078000:store:0
-O3PipeView:fetch:10855948681000:0x7fd1b6c06154:0:53:v_add_co_u32 v4, vcc_lo, v0, s6
-O3PipeView:decode:10855948682000
-O3PipeView:rename:10855948683000
-O3PipeView:dispatch:10855950073000
-O3PipeView:issue:10855950077000
-O3PipeView:complete:10855950081000
-O3PipeView:retire:10855950082000:store:0
-O3PipeView:fetch:10855948685000:0x7fd1b6c0615c:0:54:v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
-O3PipeView:decode:10855948686000
-O3PipeView:rename:10855948687000
-O3PipeView:dispatch:10855950079000
-O3PipeView:issue:10855950081000
-O3PipeView:complete:10855950085000
-O3PipeView:retire:10855950086000:store:0
-O3PipeView:fetch:10855948701000:0x7fd1b6c06164:0:58:v_cmp_lt_u64 s[106:107], v[2:3], s[8:9]
-O3PipeView:decode:10855948702000
-O3PipeView:rename:10855948703000
-O3PipeView:dispatch:10855950083000
-O3PipeView:issue:10855950085000
-O3PipeView:complete:10855950089000
-O3PipeView:retire:10855950090000:store:0
-O3PipeView:fetch:10855948717000:0x7fd1b6c0616c:0:62:s_cbranch_vccz
-O3PipeView:decode:10855948718000
-O3PipeView:rename:10855948719000
-O3PipeView:dispatch:10855950087000
-O3PipeView:issue:10855950088000
-O3PipeView:complete:10855950092000
-O3PipeView:retire:10855950093000:store:0
-O3PipeView:fetch:10855950090000:0x7fd1b6c061ac:0:77:s_mov_b64 exec, -1
-O3PipeView:decode:10855950091000
-O3PipeView:rename:10855950092000
-O3PipeView:dispatch:10855950093000
-O3PipeView:issue:10855950094000
-O3PipeView:complete:10855950098000
-O3PipeView:retire:10855950099000:store:0
-O3PipeView:fetch:10855950090000:0x7fd1b6c061b0:0:78:s_lshl_b32 s25, s24, 4
-O3PipeView:decode:10855950091000
-O3PipeView:rename:10855950092000
-O3PipeView:dispatch:10855950094000
-O3PipeView:issue:10855950098000
-O3PipeView:complete:10855950102000
-O3PipeView:retire:10855950103000:store:0
-O3PipeView:fetch:10855950090000:0x7fd1b6c061b4:0:79:v_lshlrev_b32 v1, 4, v0
-O3PipeView:decode:10855950091000
-O3PipeView:rename:10855950092000
-O3PipeView:dispatch:10855950098000
-O3PipeView:issue:10855950099000
-O3PipeView:complete:10855950103000
-O3PipeView:retire:10855950104000:store:0
-O3PipeView:fetch:10855950090000:0x7fd1b6c061b8:0:80:v_mov_b32 v3, s9
-O3PipeView:decode:10855950091000
-O3PipeView:rename:10855950092000
-O3PipeView:dispatch:10855950099000
-O3PipeView:issue:10855950103000
-O3PipeView:complete:10855950107000
-O3PipeView:retire:10855950108000:store:0
-O3PipeView:fetch:10855950094000:0x7fd1b6c061bc:0:81:v_add_co_u32 v2, vcc_lo, v1, s8
-O3PipeView:decode:10855950095000
-O3PipeView:rename:10855950096000
-O3PipeView:dispatch:10855950103000
-O3PipeView:issue:10855950107000
-O3PipeView:complete:10855950111000
-O3PipeView:retire:10855950112000:store:0
-O3PipeView:fetch:10855950094000:0x7fd1b6c061c4:0:82:v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
-O3PipeView:decode:10855950095000
-O3PipeView:rename:10855950096000
-O3PipeView:dispatch:10855950109000
-O3PipeView:issue:10855950111000
-O3PipeView:complete:10855950115000
-O3PipeView:retire:10855950116000:store:0
-O3PipeView:fetch:10855950094000:0x7fd1b6c061cc:0:83:v_mov_b32 v5, s11
-O3PipeView:decode:10855950095000
-O3PipeView:rename:10855950096000
-O3PipeView:dispatch:10855950111000
-O3PipeView:issue:10855950115000
-O3PipeView:complete:10855950119000
-O3PipeView:retire:10855950120000:store:0
-O3PipeView:fetch:10855950094000:0x7fd1b6c061d0:0:84:v_add_co_u32 v4, vcc_lo, v1, s10
-O3PipeView:decode:10855950095000
-O3PipeView:rename:10855950096000
-O3PipeView:dispatch:10855950115000
-O3PipeView:issue:10855950119000
-O3PipeView:complete:10855950123000
-O3PipeView:retire:10855950124000:store:0
-O3PipeView:fetch:10855950094000:0x7fd1b6c061d8:0:85:v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
-O3PipeView:decode:10855950095000
-O3PipeView:rename:10855950096000
-O3PipeView:dispatch:10855950121000
-O3PipeView:issue:10855950123000
-O3PipeView:complete:10855950127000
-O3PipeView:retire:10855950128000:store:0
-O3PipeView:fetch:10855950094000:0x7fd1b6c061e0:0:86:v_cmp_lt_u64 s[106:107], v[2:3], s[12:13]
-O3PipeView:decode:10855950095000
-O3PipeView:rename:10855950096000
-O3PipeView:dispatch:10855950125000
-O3PipeView:issue:10855950127000
-O3PipeView:complete:10855950131000
-O3PipeView:retire:10855950132000:store:0
-O3PipeView:fetch:10855950094000:0x7fd1b6c061e8:0:87:s_cbranch_vccz
-O3PipeView:decode:10855950095000
-O3PipeView:rename:10855950096000
-O3PipeView:dispatch:10855950129000
-O3PipeView:issue:10855950140000
-O3PipeView:complete:10855950144000
-O3PipeView:retire:10855950145000:store:0
-O3PipeView:fetch:10855950142000:0x7fd1b6c06224:0:129:s_lshl_b32 s25, s24, 2
-O3PipeView:decode:10855950143000
-O3PipeView:rename:10855950144000
-O3PipeView:dispatch:10855950145000
-O3PipeView:issue:10855950146000
-O3PipeView:complete:10855950150000
-O3PipeView:retire:10855950151000:store:0
-O3PipeView:fetch:10855950142000:0x7fd1b6c06228:0:130:v_lshlrev_b32 v1, 2, v0
-O3PipeView:decode:10855950143000
-O3PipeView:rename:10855950144000
-O3PipeView:dispatch:10855950146000
-O3PipeView:issue:10855950147000
-O3PipeView:complete:10855950151000
-O3PipeView:retire:10855950152000:store:0
-O3PipeView:fetch:10855950142000:0x7fd1b6c0622c:0:131:v_mov_b32 v3, s13
-O3PipeView:decode:10855950143000
-O3PipeView:rename:10855950144000
-O3PipeView:dispatch:10855950147000
-O3PipeView:issue:10855950151000
-O3PipeView:complete:10855950155000
-O3PipeView:retire:10855950156000:store:0
-O3PipeView:fetch:10855950142000:0x7fd1b6c06230:0:132:v_add_co_u32 v2, vcc_lo, v1, s12
-O3PipeView:decode:10855950143000
-O3PipeView:rename:10855950144000
-O3PipeView:dispatch:10855950151000
-O3PipeView:issue:10855950155000
-O3PipeView:complete:10855950159000
-O3PipeView:retire:10855950160000:store:0
-O3PipeView:fetch:10855950142000:0x7fd1b6c06238:0:133:v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
-O3PipeView:decode:10855950143000
-O3PipeView:rename:10855950144000
-O3PipeView:dispatch:10855950157000
-O3PipeView:issue:10855950159000
-O3PipeView:complete:10855950163000
-O3PipeView:retire:10855950164000:store:0
-O3PipeView:fetch:10855950146000:0x7fd1b6c06240:0:134:v_mov_b32 v5, s15
-O3PipeView:decode:10855950147000
-O3PipeView:rename:10855950148000
-O3PipeView:dispatch:10855950159000
-O3PipeView:issue:10855950163000
-O3PipeView:complete:10855950167000
-O3PipeView:retire:10855950168000:store:0
-O3PipeView:fetch:10855950146000:0x7fd1b6c06244:0:135:v_add_co_u32 v4, vcc_lo, v1, s14
-O3PipeView:decode:10855950147000
-O3PipeView:rename:10855950148000
-O3PipeView:dispatch:10855950163000
-O3PipeView:issue:10855950167000
-O3PipeView:complete:10855950171000
-O3PipeView:retire:10855950172000:store:0
-O3PipeView:fetch:10855950146000:0x7fd1b6c0624c:0:136:v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
-O3PipeView:decode:10855950147000
-O3PipeView:rename:10855950148000
-O3PipeView:dispatch:10855950169000
-O3PipeView:issue:10855950171000
-O3PipeView:complete:10855950175000
-O3PipeView:retire:10855950176000:store:0
-O3PipeView:fetch:10855950146000:0x7fd1b6c06254:0:137:v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
-O3PipeView:decode:10855950147000
-O3PipeView:rename:10855950148000
-O3PipeView:dispatch:10855950173000
-O3PipeView:issue:10855950175000
-O3PipeView:complete:10855950179000
-O3PipeView:retire:10855950180000:store:0
-O3PipeView:fetch:10855950146000:0x7fd1b6c0625c:0:138:s_cbranch_vccz
-O3PipeView:decode:10855950147000
-O3PipeView:rename:10855950148000
-O3PipeView:dispatch:10855950177000
-O3PipeView:issue:10855950180000
-O3PipeView:complete:10855950184000
-O3PipeView:retire:10855950185000:store:0
-O3PipeView:fetch:10855950146000:0x7fd1b6c06260:0:139:s_and_b64 exec, exec, vcc_lo
-O3PipeView:decode:10855950147000
-O3PipeView:rename:10855950148000
-O3PipeView:dispatch:10855950180000
-O3PipeView:issue:10855950184000
-O3PipeView:complete:10855950188000
-O3PipeView:retire:10855950189000:store:0
-O3PipeView:fetch:10855950146000:0x7fd1b6c0626c:0:141:v_add_co_u32 v2, vcc_lo, v2, s25
-O3PipeView:decode:10855950147000
-O3PipeView:rename:10855950148000
-O3PipeView:dispatch:10855950185000
-O3PipeView:issue:10855950186000
-O3PipeView:complete:10855950190000
-O3PipeView:retire:10855950191000:store:0
-O3PipeView:fetch:10855950146000:0x7fd1b6c06274:0:142:v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
-O3PipeView:decode:10855950147000
-O3PipeView:rename:10855950148000
-O3PipeView:dispatch:10855950188000
-O3PipeView:issue:10855950190000
-O3PipeView:complete:10855950194000
-O3PipeView:retire:10855950195000:store:0
-O3PipeView:fetch:18446744073709550615:0x7fd1b6c0627c:0:185:s_waitcnt vmcnt(0)
-O3PipeView:decode:18446744073709551615
-O3PipeView:rename:18446744073709552615
-O3PipeView:dispatch:10855950190000
-O3PipeView:issue:10855950194000
-O3PipeView:complete:10855950198000
-O3PipeView:retire:10855950199000:store:0
-O3PipeView:fetch:10855950146000:0x7fd1b6c06280:0:140:flat_load_dword v1, v[2:3]
-O3PipeView:decode:10855950147000
-O3PipeView:rename:10855950148000
-O3PipeView:dispatch:10855950184000
-O3PipeView:issue:10855950185000
-O3PipeView:complete:10855951513000
-O3PipeView:retire:10855951613000:store:10855951614000
-O3PipeView:fetch:10855950183000:0x7fd1b6c06288:0:187:v_add_co_u32 v4, vcc_lo, v4, s25
-O3PipeView:decode:10855950184000
-O3PipeView:rename:10855950185000
-O3PipeView:dispatch:10855951617000
-O3PipeView:issue:10855951618000
-O3PipeView:complete:10855951622000
-O3PipeView:retire:10855951623000:store:0
-O3PipeView:fetch:10855950183000:0x7fd1b6c06290:0:188:v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
-O3PipeView:decode:10855950184000
-O3PipeView:rename:10855950185000
-O3PipeView:dispatch:10855951620000
-O3PipeView:issue:10855951622000
-O3PipeView:complete:10855951626000
-O3PipeView:retire:10855951627000:store:0
-O3PipeView:fetch:10855950183000:0x7fd1b6c06298:0:189:s_branch
-O3PipeView:decode:10855950184000
-O3PipeView:rename:10855950185000
-O3PipeView:dispatch:10855951622000
-O3PipeView:issue:10855951623000
-O3PipeView:complete:10855951627000
-O3PipeView:retire:10855951628000:store:0
-O3PipeView:fetch:10855951625000:0x7fd1b6c06254:0:785:v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
-O3PipeView:decode:10855951626000
-O3PipeView:rename:10855951627000
-O3PipeView:dispatch:10855951628000
-O3PipeView:issue:10855951629000
-O3PipeView:complete:10855951633000
-O3PipeView:retire:10855951634000:store:0
-O3PipeView:fetch:10855951625000:0x7fd1b6c0625c:0:786:s_cbranch_vccz
-O3PipeView:decode:10855951626000
-O3PipeView:rename:10855951627000
-O3PipeView:dispatch:10855951631000
-O3PipeView:issue:10855951632000
-O3PipeView:complete:10855951636000
-O3PipeView:retire:10855951637000:store:0
-O3PipeView:fetch:10855951634000:0x7fd1b6c0629c:0:797:s_mov_b64 exec, -1
-O3PipeView:decode:10855951635000
-O3PipeView:rename:10855951636000
-O3PipeView:dispatch:10855951637000
-O3PipeView:issue:10855951640000
-O3PipeView:complete:10855951644000
-O3PipeView:retire:10855951645000:store:0
-O3PipeView:fetch:10855951634000:0x7fd1b6c062a0:0:798:v_mov_b32 v3, s17
-O3PipeView:decode:10855951635000
-O3PipeView:rename:10855951636000
-O3PipeView:dispatch:10855951640000
-O3PipeView:issue:10855951641000
-O3PipeView:complete:10855951645000
-O3PipeView:retire:10855951646000:store:0
-O3PipeView:fetch:10855951634000:0x7fd1b6c062a4:0:799:v_add_co_u32 v2, vcc_lo, v0, s16
-O3PipeView:decode:10855951635000
-O3PipeView:rename:10855951636000
-O3PipeView:dispatch:10855951641000
-O3PipeView:issue:10855951645000
-O3PipeView:complete:10855951649000
-O3PipeView:retire:10855951650000:store:0
-O3PipeView:fetch:10855951634000:0x7fd1b6c062ac:0:800:v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
-O3PipeView:decode:10855951635000
-O3PipeView:rename:10855951636000
-O3PipeView:dispatch:10855951647000
-O3PipeView:issue:10855951649000
-O3PipeView:complete:10855951653000
-O3PipeView:retire:10855951654000:store:0
-O3PipeView:fetch:10855951634000:0x7fd1b6c062b4:0:801:v_mov_b32 v5, s19
-O3PipeView:decode:10855951635000
-O3PipeView:rename:10855951636000
-O3PipeView:dispatch:10855951649000
-O3PipeView:issue:10855951653000
-O3PipeView:complete:10855951657000
-O3PipeView:retire:10855951658000:store:0
-O3PipeView:fetch:10855951634000:0x7fd1b6c062b8:0:802:v_add_co_u32 v4, vcc_lo, v0, s18
-O3PipeView:decode:10855951635000
-O3PipeView:rename:10855951636000
-O3PipeView:dispatch:10855951653000
-O3PipeView:issue:10855951657000
-O3PipeView:complete:10855951661000
-O3PipeView:retire:10855951662000:store:0
-O3PipeView:fetch:10855951638000:0x7fd1b6c062c0:0:803:v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
-O3PipeView:decode:10855951639000
-O3PipeView:rename:10855951640000
-O3PipeView:dispatch:10855951659000
-O3PipeView:issue:10855951661000
-O3PipeView:complete:10855951665000
-O3PipeView:retire:10855951666000:store:0
-O3PipeView:fetch:10855951638000:0x7fd1b6c062c8:0:804:v_cmp_lt_u64 s[106:107], v[2:3], s[20:21]
-O3PipeView:decode:10855951639000
-O3PipeView:rename:10855951640000
-O3PipeView:dispatch:10855951663000
-O3PipeView:issue:10855951665000
-O3PipeView:complete:10855951669000
-O3PipeView:retire:10855951670000:store:0
-O3PipeView:fetch:10855951638000:0x7fd1b6c062d0:0:805:s_cbranch_vccz
-O3PipeView:decode:10855951639000
-O3PipeView:rename:10855951640000
-O3PipeView:dispatch:10855951667000
-O3PipeView:issue:10855951668000
-O3PipeView:complete:10855951672000
-O3PipeView:retire:10855951673000:store:0
-O3PipeView:fetch:10855950183000:0x7fd1b6c062ec:0:186:flat_store_dword v[4:5], v1
-O3PipeView:decode:10855950184000
-O3PipeView:rename:10855950185000
-O3PipeView:dispatch:10855951616000
-O3PipeView:issue:10855951617000
-O3PipeView:complete:10855952877000
-O3PipeView:retire:10855953162000:store:10855953163000
-O3PipeView:fetch:10855951670000:0x7fd1b6c062ec:0:831:s_endpgm
-O3PipeView:decode:10855951671000
-O3PipeView:rename:10855951672000
-O3PipeView:dispatch:10855953164000
-O3PipeView:issue:10855953165000
-O3PipeView:complete:10855953169000
-O3PipeView:retire:10855953170000:store:0
+O3PipeView:fetch:10851487314:0x7fd1b6c06134:0:1:s_load_dwordx4 s[4:7], s[0:1], 0x00
+O3PipeView:decode:10851487330
+O3PipeView:rename:10851487331
+O3PipeView:dispatch:10851487332
+O3PipeView:issue:10851487333
+O3PipeView:complete:10851487418
+O3PipeView:retire:10851487468:store:10851487469
+O3PipeView:fetch:10851487314:0x7fd1b6c06134:0:2:s_load_dwordx4 s[8:11], s[0:1], 0x10
+O3PipeView:decode:10851487330
+O3PipeView:rename:10851487331
+O3PipeView:dispatch:10851487333
+O3PipeView:issue:10851487337
+O3PipeView:complete:10851487422
+O3PipeView:retire:10851487472:store:10851487473
+O3PipeView:fetch:10851487314:0x7fd1b6c06134:0:3:s_load_dwordx4 s[12:15], s[0:1], 0x20
+O3PipeView:decode:10851487330
+O3PipeView:rename:10851487331
+O3PipeView:dispatch:10851487337
+O3PipeView:issue:10851487353
+O3PipeView:complete:10851487438
+O3PipeView:retire:10851487488:store:10851487489
+O3PipeView:fetch:10851487314:0x7fd1b6c06134:0:4:s_load_dwordx4 s[16:19], s[0:1], 0x30
+O3PipeView:decode:10851487330
+O3PipeView:rename:10851487331
+O3PipeView:dispatch:10851487353
+O3PipeView:issue:10851487369
+O3PipeView:complete:10851487454
+O3PipeView:retire:10851487504:store:10851487505
+O3PipeView:fetch:10851487314:0x7fd1b6c06134:0:5:s_load_dwordx4 s[20:23], s[0:1], 0x40
+O3PipeView:decode:10851487330
+O3PipeView:rename:10851487331
+O3PipeView:dispatch:10851487369
+O3PipeView:issue:10851487385
+O3PipeView:complete:10851487470
+O3PipeView:retire:10851487520:store:10851487521
+O3PipeView:fetch:10851487314:0x7fd1b6c06134:0:6:s_load_dword s24, s[0:1], 0x50
+O3PipeView:decode:10851487330
+O3PipeView:rename:10851487331
+O3PipeView:dispatch:10851487385
+O3PipeView:issue:10851487401
+O3PipeView:complete:10851487486
+O3PipeView:retire:10851487536:store:10851487537
+O3PipeView:fetch:10851487314:0x7fd1b6c06130:0:7:s_waitcnt lgkmcnt(0)
+O3PipeView:decode:10851487330
+O3PipeView:rename:10851487331
+O3PipeView:dispatch:10851487401
+O3PipeView:issue:10851487402
+O3PipeView:retire:10851487406:store:0
+O3PipeView:fetch:10851487314:0x7fd1b6c06134:0:8:s_lshl_b32 s2, s2, 6
+O3PipeView:decode:10851487330
+O3PipeView:rename:10851487331
+O3PipeView:dispatch:10851487538
+O3PipeView:issue:10851487539
+O3PipeView:retire:10851487543:store:0
+O3PipeView:fetch:10851487314:0x7fd1b6c06138:0:9:v_add_co_u32 v0, vcc, s2, v0
+O3PipeView:decode:10851487330
+O3PipeView:rename:10851487331
+O3PipeView:dispatch:10851487541
+O3PipeView:issue:10851487542
+O3PipeView:retire:10851487546:store:0
+O3PipeView:fetch:10851487314:0x7fd1b6c0613c:0:10:v_mov_b32 v3, s5
+O3PipeView:decode:10851487332
+O3PipeView:rename:10851487333
+O3PipeView:dispatch:10851487542
+O3PipeView:issue:10851487546
+O3PipeView:retire:10851487550:store:0
+O3PipeView:fetch:10851487330:0x7fd1b6c06140:0:11:v_add_co_u32 v2, vcc_lo, v0, s4
+O3PipeView:decode:10851487332
+O3PipeView:rename:10851487333
+O3PipeView:dispatch:10851487546
+O3PipeView:issue:10851487550
+O3PipeView:retire:10851487554:store:0
+O3PipeView:fetch:10851487330:0x7fd1b6c06148:0:12:v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+O3PipeView:decode:10851487332
+O3PipeView:rename:10851487333
+O3PipeView:dispatch:10851487552
+O3PipeView:issue:10851487554
+O3PipeView:retire:10851487558:store:0
+O3PipeView:fetch:10851487330:0x7fd1b6c06150:0:13:v_mov_b32 v5, s7
+O3PipeView:decode:10851487332
+O3PipeView:rename:10851487333
+O3PipeView:dispatch:10851487554
+O3PipeView:issue:10851487558
+O3PipeView:retire:10851487562:store:0
+O3PipeView:fetch:10851487330:0x7fd1b6c06154:0:14:v_add_co_u32 v4, vcc_lo, v0, s6
+O3PipeView:decode:10851487333
+O3PipeView:rename:10851487334
+O3PipeView:dispatch:10851487558
+O3PipeView:issue:10851487562
+O3PipeView:retire:10851487566:store:0
+O3PipeView:fetch:10851487330:0x7fd1b6c0615c:0:15:v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+O3PipeView:decode:10851487337
+O3PipeView:rename:10851487338
+O3PipeView:dispatch:10851487564
+O3PipeView:issue:10851487566
+O3PipeView:retire:10851487570:store:0
+O3PipeView:fetch:10851487330:0x7fd1b6c06164:0:16:v_cmp_lt_u64 s[106:107], v[2:3], s[8:9]
+O3PipeView:decode:10851487353
+O3PipeView:rename:10851487354
+O3PipeView:dispatch:10851487568
+O3PipeView:issue:10851487570
+O3PipeView:retire:10851487574:store:0
+O3PipeView:fetch:10851487330:0x7fd1b6c0616c:0:17:s_cbranch_vccz
+O3PipeView:decode:10851487369
+O3PipeView:rename:10851487370
+O3PipeView:dispatch:10851487572
+O3PipeView:issue:10851487573
+O3PipeView:retire:10851487577:store:0
+O3PipeView:fetch:10851487573:0x7fd1b6c061ac:0:18:s_mov_b64 exec, -1
+O3PipeView:decode:10851487576
+O3PipeView:rename:10851487577
+O3PipeView:dispatch:10851487578
+O3PipeView:issue:10851487579
+O3PipeView:retire:10851487583:store:0
+O3PipeView:fetch:10851487573:0x7fd1b6c061b0:0:19:s_lshl_b32 s25, s24, 4
+O3PipeView:decode:10851487576
+O3PipeView:rename:10851487577
+O3PipeView:dispatch:10851487579
+O3PipeView:issue:10851487583
+O3PipeView:retire:10851487587:store:0
+O3PipeView:fetch:10851487573:0x7fd1b6c061b4:0:20:v_lshlrev_b32 v1, 4, v0
+O3PipeView:decode:10851487576
+O3PipeView:rename:10851487577
+O3PipeView:dispatch:10851487583
+O3PipeView:issue:10851487584
+O3PipeView:retire:10851487588:store:0
+O3PipeView:fetch:10851487573:0x7fd1b6c061b8:0:21:v_mov_b32 v3, s9
+O3PipeView:decode:10851487576
+O3PipeView:rename:10851487577
+O3PipeView:dispatch:10851487584
+O3PipeView:issue:10851487588
+O3PipeView:retire:10851487592:store:0
+O3PipeView:fetch:10851487573:0x7fd1b6c061bc:0:22:v_add_co_u32 v2, vcc_lo, v1, s8
+O3PipeView:decode:10851487580
+O3PipeView:rename:10851487581
+O3PipeView:dispatch:10851487588
+O3PipeView:issue:10851487592
+O3PipeView:retire:10851487596:store:0
+O3PipeView:fetch:10851487576:0x7fd1b6c061c4:0:23:v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+O3PipeView:decode:10851487580
+O3PipeView:rename:10851487581
+O3PipeView:dispatch:10851487594
+O3PipeView:issue:10851487596
+O3PipeView:retire:10851487600:store:0
+O3PipeView:fetch:10851487576:0x7fd1b6c061cc:0:24:v_mov_b32 v5, s11
+O3PipeView:decode:10851487580
+O3PipeView:rename:10851487581
+O3PipeView:dispatch:10851487596
+O3PipeView:issue:10851487600
+O3PipeView:retire:10851487604:store:0
+O3PipeView:fetch:10851487576:0x7fd1b6c061d0:0:25:v_add_co_u32 v4, vcc_lo, v1, s10
+O3PipeView:decode:10851487580
+O3PipeView:rename:10851487581
+O3PipeView:dispatch:10851487600
+O3PipeView:issue:10851487604
+O3PipeView:retire:10851487608:store:0
+O3PipeView:fetch:10851487576:0x7fd1b6c061d8:0:26:v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+O3PipeView:decode:10851487580
+O3PipeView:rename:10851487581
+O3PipeView:dispatch:10851487606
+O3PipeView:issue:10851487608
+O3PipeView:retire:10851487612:store:0
+O3PipeView:fetch:10851487576:0x7fd1b6c061e0:0:27:v_cmp_lt_u64 s[106:107], v[2:3], s[12:13]
+O3PipeView:decode:10851487580
+O3PipeView:rename:10851487581
+O3PipeView:dispatch:10851487610
+O3PipeView:issue:10851487612
+O3PipeView:retire:10851487616:store:0
+O3PipeView:fetch:10851487576:0x7fd1b6c061e8:0:28:s_cbranch_vccz
+O3PipeView:decode:10851487580
+O3PipeView:rename:10851487581
+O3PipeView:dispatch:10851487614
+O3PipeView:issue:10851487625
+O3PipeView:retire:10851487629:store:0
+O3PipeView:fetch:10851487625:0x7fd1b6c06224:0:29:s_lshl_b32 s25, s24, 2
+O3PipeView:decode:10851487628
+O3PipeView:rename:10851487629
+O3PipeView:dispatch:10851487630
+O3PipeView:issue:10851487631
+O3PipeView:retire:10851487635:store:0
+O3PipeView:fetch:10851487625:0x7fd1b6c06228:0:30:v_lshlrev_b32 v1, 2, v0
+O3PipeView:decode:10851487628
+O3PipeView:rename:10851487629
+O3PipeView:dispatch:10851487631
+O3PipeView:issue:10851487632
+O3PipeView:retire:10851487636:store:0
+O3PipeView:fetch:10851487625:0x7fd1b6c0622c:0:31:v_mov_b32 v3, s13
+O3PipeView:decode:10851487628
+O3PipeView:rename:10851487629
+O3PipeView:dispatch:10851487632
+O3PipeView:issue:10851487636
+O3PipeView:retire:10851487640:store:0
+O3PipeView:fetch:10851487625:0x7fd1b6c06230:0:32:v_add_co_u32 v2, vcc_lo, v1, s12
+O3PipeView:decode:10851487628
+O3PipeView:rename:10851487629
+O3PipeView:dispatch:10851487636
+O3PipeView:issue:10851487640
+O3PipeView:retire:10851487644:store:0
+O3PipeView:fetch:10851487625:0x7fd1b6c06238:0:33:v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+O3PipeView:decode:10851487628
+O3PipeView:rename:10851487629
+O3PipeView:dispatch:10851487642
+O3PipeView:issue:10851487644
+O3PipeView:retire:10851487648:store:0
+O3PipeView:fetch:10851487628:0x7fd1b6c06240:0:34:v_mov_b32 v5, s15
+O3PipeView:decode:10851487632
+O3PipeView:rename:10851487633
+O3PipeView:dispatch:10851487644
+O3PipeView:issue:10851487648
+O3PipeView:retire:10851487652:store:0
+O3PipeView:fetch:10851487628:0x7fd1b6c06244:0:35:v_add_co_u32 v4, vcc_lo, v1, s14
+O3PipeView:decode:10851487632
+O3PipeView:rename:10851487633
+O3PipeView:dispatch:10851487648
+O3PipeView:issue:10851487652
+O3PipeView:retire:10851487656:store:0
+O3PipeView:fetch:10851487628:0x7fd1b6c0624c:0:36:v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+O3PipeView:decode:10851487632
+O3PipeView:rename:10851487633
+O3PipeView:dispatch:10851487654
+O3PipeView:issue:10851487656
+O3PipeView:retire:10851487660:store:0
+O3PipeView:fetch:10851487628:0x7fd1b6c06254:0:37:v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+O3PipeView:decode:10851487632
+O3PipeView:rename:10851487633
+O3PipeView:dispatch:10851487658
+O3PipeView:issue:10851487660
+O3PipeView:retire:10851487664:store:0
+O3PipeView:fetch:10851487628:0x7fd1b6c0625c:0:38:s_cbranch_vccz
+O3PipeView:decode:10851487632
+O3PipeView:rename:10851487633
+O3PipeView:dispatch:10851487662
+O3PipeView:issue:10851487665
+O3PipeView:retire:10851487669:store:0
+O3PipeView:fetch:10851487628:0x7fd1b6c06260:0:39:s_and_b64 exec, exec, vcc_lo
+O3PipeView:decode:10851487632
+O3PipeView:rename:10851487633
+O3PipeView:dispatch:10851487665
+O3PipeView:issue:10851487669
+O3PipeView:retire:10851487673:store:0
+O3PipeView:fetch:10851487665:0x7fd1b6c06280:0:40:flat_load_dword v1, v[2:3]
+O3PipeView:decode:10851487632
+O3PipeView:rename:10851487633
+O3PipeView:dispatch:10851487669
+O3PipeView:issue:10851487670
+O3PipeView:complete:0
+O3PipeView:retire:10851487726:store:10851487727
+O3PipeView:fetch:10851487628:0x7fd1b6c0626c:0:41:v_add_co_u32 v2, vcc_lo, v2, s25
+O3PipeView:decode:10851487632
+O3PipeView:rename:10851487633
+O3PipeView:dispatch:10851487670
+O3PipeView:issue:10851487671
+O3PipeView:retire:10851487675:store:0
+O3PipeView:fetch:10851487628:0x7fd1b6c06274:0:42:v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+O3PipeView:decode:10851487632
+O3PipeView:rename:10851487633
+O3PipeView:dispatch:10851487673
+O3PipeView:issue:10851487675
+O3PipeView:retire:10851487679:store:0
+O3PipeView:fetch:10851487628:0x7fd1b6c0627c:0:43:s_waitcnt vmcnt(0)
+O3PipeView:decode:10851487895
+O3PipeView:rename:10851487896
+O3PipeView:dispatch:10851487675
+O3PipeView:issue:10851487679
+O3PipeView:retire:10851487683:store:0
+O3PipeView:fetch:10851487748:0x7fd1b6c062ec:0:44:flat_store_dword v[4:5], v1
+O3PipeView:decode:10851487669
+O3PipeView:rename:10851487670
+O3PipeView:dispatch:10851487729
+O3PipeView:issue:10851487730
+O3PipeView:complete:0
+O3PipeView:retire:10851487876:store:10851487877
+O3PipeView:fetch:10851487665:0x7fd1b6c06288:0:45:v_add_co_u32 v4, vcc_lo, v4, s25
+O3PipeView:decode:10851487669
+O3PipeView:rename:10851487670
+O3PipeView:dispatch:10851487730
+O3PipeView:issue:10851487731
+O3PipeView:retire:10851487735:store:0
+O3PipeView:fetch:10851487665:0x7fd1b6c06290:0:46:v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+O3PipeView:decode:10851487669
+O3PipeView:rename:10851487670
+O3PipeView:dispatch:10851487733
+O3PipeView:issue:10851487735
+O3PipeView:retire:10851487739:store:0
+O3PipeView:fetch:10851487665:0x7fd1b6c06298:0:47:s_branch
+O3PipeView:decode:10851487669
+O3PipeView:rename:10851487670
+O3PipeView:dispatch:10851487735
+O3PipeView:issue:10851487736
+O3PipeView:retire:10851487740:store:0
+O3PipeView:fetch:10851487628:0x7fd1b6c06254:0:48:v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+O3PipeView:decode:10851487739
+O3PipeView:rename:10851487740
+O3PipeView:dispatch:10851487741
+O3PipeView:issue:10851487742
+O3PipeView:retire:10851487746:store:0
+O3PipeView:fetch:10851487628:0x7fd1b6c0625c:0:49:s_cbranch_vccz
+O3PipeView:decode:10851487739
+O3PipeView:rename:10851487740
+O3PipeView:dispatch:10851487744
+O3PipeView:issue:10851487745
+O3PipeView:retire:10851487749:store:0
+O3PipeView:fetch:10851487665:0x7fd1b6c0629c:0:50:s_mov_b64 exec, -1
+O3PipeView:decode:10851487748
+O3PipeView:rename:10851487749
+O3PipeView:dispatch:10851487750
+O3PipeView:issue:10851487753
+O3PipeView:retire:10851487757:store:0
+O3PipeView:fetch:10851487665:0x7fd1b6c062a0:0:51:v_mov_b32 v3, s17
+O3PipeView:decode:10851487748
+O3PipeView:rename:10851487749
+O3PipeView:dispatch:10851487753
+O3PipeView:issue:10851487754
+O3PipeView:retire:10851487758:store:0
+O3PipeView:fetch:10851487665:0x7fd1b6c062a4:0:52:v_add_co_u32 v2, vcc_lo, v0, s16
+O3PipeView:decode:10851487748
+O3PipeView:rename:10851487749
+O3PipeView:dispatch:10851487754
+O3PipeView:issue:10851487758
+O3PipeView:retire:10851487762:store:0
+O3PipeView:fetch:10851487665:0x7fd1b6c062ac:0:53:v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+O3PipeView:decode:10851487748
+O3PipeView:rename:10851487749
+O3PipeView:dispatch:10851487760
+O3PipeView:issue:10851487762
+O3PipeView:retire:10851487766:store:0
+O3PipeView:fetch:10851487665:0x7fd1b6c062b4:0:54:v_mov_b32 v5, s19
+O3PipeView:decode:10851487748
+O3PipeView:rename:10851487749
+O3PipeView:dispatch:10851487762
+O3PipeView:issue:10851487766
+O3PipeView:retire:10851487770:store:0
+O3PipeView:fetch:10851487665:0x7fd1b6c062b8:0:55:v_add_co_u32 v4, vcc_lo, v0, s18
+O3PipeView:decode:10851487748
+O3PipeView:rename:10851487749
+O3PipeView:dispatch:10851487766
+O3PipeView:issue:10851487770
+O3PipeView:retire:10851487774:store:0
+O3PipeView:fetch:10851487748:0x7fd1b6c062c0:0:56:v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+O3PipeView:decode:10851487752
+O3PipeView:rename:10851487753
+O3PipeView:dispatch:10851487772
+O3PipeView:issue:10851487774
+O3PipeView:retire:10851487778:store:0
+O3PipeView:fetch:10851487748:0x7fd1b6c062c8:0:57:v_cmp_lt_u64 s[106:107], v[2:3], s[20:21]
+O3PipeView:decode:10851487752
+O3PipeView:rename:10851487753
+O3PipeView:dispatch:10851487776
+O3PipeView:issue:10851487778
+O3PipeView:retire:10851487782:store:0
+O3PipeView:fetch:10851487748:0x7fd1b6c062d0:0:58:s_cbranch_vccz
+O3PipeView:decode:10851487752
+O3PipeView:rename:10851487753
+O3PipeView:dispatch:10851487780
+O3PipeView:issue:10851487781
+O3PipeView:retire:10851487785:store:0
+O3PipeView:fetch:10851487748:0x7fd1b6c062ec:0:59:s_endpgm
+O3PipeView:decode:10851487784
+O3PipeView:rename:10851487785
+O3PipeView:dispatch:10851487878
+O3PipeView:issue:10851487879
+O3PipeView:retire:10851487883:store:0
