@@ -145,8 +145,6 @@ def update_instruction_ticks(instructions: List[Instruction], time_map: Dict[int
             comp_tick = time_map.get(ori_tick, ori_tick)
             inst.stages[stage] = comp_tick
             stage_ticks[stage] = (ori_tick, comp_tick)
-
-        # 计算阶段间间隔对比
         prev_stage = None
         for stage in STAGE_ORDER:
             if stage in stage_ticks:
@@ -157,6 +155,23 @@ def update_instruction_ticks(instructions: List[Instruction], time_map: Dict[int
                     inst.stages[f"{prev_stage}_time"] = comp_tick - prev_comp
                     inst.stages[f"{prev_stage}_ori_time"] = ori_tick - prev_ori
                 prev_stage = stage
+        if inst.if_tcp:
+            tcp_time_list = []
+            for addr, ticks in inst.tcp_access.items():
+                timeCur = [addr]
+                prev_ori_tick = None
+                prev_comp_tick = None
+                for i, ori_tick in enumerate(ticks):
+                    comp_tick = time_map.get(ori_tick, ori_tick)
+                    if i > 0:
+                        ori_time = ori_tick - prev_ori_tick
+                        comp_time = comp_tick - prev_comp_tick
+                        enlarged = comp_time < ori_time
+                        timeCur.append([comp_time, ori_time, enlarged])
+                    prev_ori_tick = ori_tick
+                    prev_comp_tick = comp_tick
+                tcp_time_list.append(timeCur)
+            inst.tcpAccTime = tcp_time_list  # 存入实例
 
 
 def generate_outputs(instructions: List[Instruction]):
@@ -179,14 +194,22 @@ def generate_outputs(instructions: List[Instruction]):
             if stage in inst.stages :
                 enlarged = inst.stages.get(f"{prev_stage}_enlarged", False)
                 delta = inst.stages.get(f"{prev_stage}_time", 0)
-                if enlarged:
-                    ori = inst.stages.get(f"{prev_stage}_ori_time", delta)
-                    C_list.append(f"{prev_stage}:{delta} (原{ori})")
-                else:
-                    C_list.append(f"{prev_stage}:{delta}")
+                ori = inst.stages.get(f"{prev_stage}_ori_time", delta)
+                C_list.append(format_stage_string(prev_stage, delta, ori, enlarged))
                 prev_stage = stage
         if 'tlbReq' not in inst.stages:
             C_list.append("issue:4")
+        # TCP 访问输出
+        if hasattr(inst, 'tcpAccTime'):
+            for entry in inst.tcpAccTime:
+                addr = entry[0]
+                C_list.append(f"addr:{addr}")
+                if len(entry) >= 2:
+                    reqTcp = entry[1]
+                    C_list.append(format_stage_string("    reqTcp", reqTcp[0], reqTcp[1], reqTcp[2]))
+                if inst.if_tcp_store and len(entry) >= 3:
+                    writeThrough = entry[2]
+                    C_list.append(format_stage_string("    writeThrough", writeThrough[0], writeThrough[1], writeThrough[2]))
     return B_list, C_list
 
 def main():

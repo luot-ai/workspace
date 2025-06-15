@@ -25,7 +25,7 @@ def parse_trace_file(input_path, output_path, raw_output_path):
     for line in lines:
         m = pattern_fetch.match(line)
         if m:
-            if m.group("wf_id") != WFID: #匹配特定wave
+            if m.group("wf_id") != WFID: 
                 continue  
             addr = m.group("addr").lower()
             tick = int(m.group("tick"))//1000
@@ -46,10 +46,9 @@ def parse_trace_file(input_path, output_path, raw_output_path):
         'scb': (re.compile(r'GPUView:scb:(\d+)'), 'scb'),
         'sch': (re.compile(r'GPUView:sch:(\d+)'), 'sch'),
         'issue': (re.compile(r'GPUView:issue:(\d+)'), 'issue'),
-        'tlbReq': (re.compile(r'GPUView:macc:(\d+)'), 'tlbReq'),
-        'sCacheReq': (re.compile(r'GPUView:stlbReturn:(\d+)'), 'sCacheReq'),
+        'tlbReq': (re.compile(r'GPUView:macc:(\d+)'), 'tlbReq'),    
+        'sCacheReq': (re.compile(r'GPUView:stlbReturn:(\d+)'), 'sCacheReq'),    
         'sCacheResp': (re.compile(r'GPUView:ScacheResp:(\d+)'), 'sCacheResp'),
-        # 'dtlbReturn': (re.compile(r'GPUView:dtlbReturn:(\d+)'), 'dtlbReturn'),
         'tcpReq': (re.compile(r'GPUView:dtlbReturn:(\d+):([0-9a-fA-FxX]+)'), 'tcpReq'),
         'tcpResp': (re.compile(r'GPUView:tcpResp:(\d+):([0-9a-fA-FxX]+)'), 'tcpResp'),
         'tcpRespSt': (re.compile(r'GPUView:tcpRespStore:(\d+):([0-9a-fA-FxX]+)'), 'tcpRespSt'),
@@ -79,11 +78,11 @@ def parse_trace_file(input_path, output_path, raw_output_path):
                 'sch': 0, 
                 'issue': 0, 
                 'tlbReq': 0, 
-                'sCacheReq': 0,
-                'sCacheResp': 0,
-                'dtlbReturn': 0,
+                'cacheAcc': 0,
+                'writeThrough': 0,
+                'cacheDone': 0,
                 'tcpAcc': {},
-                'mc': 0
+                'mc': 0,
             }
             j = 0
             flag = 0
@@ -98,12 +97,19 @@ def parse_trace_file(input_path, output_path, raw_output_path):
                     match = pattern.search(l)
                     if match:
                         ifSearch = 1
+                        tick = int(match.group(1)) // 1000
                         if var_name in ['tcpReq', 'tcpResp', 'tcpRespSt']:
                             ifTcp = 1
+                            addr = match.group(2)
+                            if var_name == 'tcpReq' and not variables['cacheAcc']:
+                                variables['cacheAcc'] = tick
+                            if var_name == 'tcpResp':
+                                variables['cacheDone'] = tick
+                                if not variables['writeThrough']:
+                                    variables['writeThrough'] = tick
                             if var_name == 'tcpRespSt':
                                 ifTcpSt = 1
-                            tick = int(match.group(1)) // 1000
-                            addr = match.group(2)
+                                variables['cacheDone'] = tick
                             if addr not in variables['tcpAcc']:
                                 variables['tcpAcc'][addr] = []
                             variables['tcpAcc'][addr].append(tick)
@@ -113,11 +119,14 @@ def parse_trace_file(input_path, output_path, raw_output_path):
                         elif stage == 'mc': flag = 0
                 if not ifSearch and not flag: #在tlbReq和mc之间可能会有未匹配的行，允许跳过TODO
                     break
-            decode, scb, sch, issue, tlbReq, sCacheReq, sCacheResp, dtlbReturn, tcpAcc, mc = (
+            decode, scb, sch, issue, \
+            tlbReq, cacheAcc, cacheDone,  \
+            writeThrough, tcpAcc, mc, = (
                 variables['decode'], variables['scb'], variables['sch'], variables['issue'],
-                variables['tlbReq'], variables['sCacheReq'], variables['sCacheResp'],
-                variables['dtlbReturn'], variables['tcpAcc'],variables['mc']
+                variables['tlbReq'], variables['cacheAcc'], variables['cacheDone'],
+                variables['writeThrough'], variables['tcpAcc'], variables['mc']
             )
+            writeThrough = writeThrough if ifTcpSt else 0 
             scb = decode+1
             # 3:保存指令信息，后续要重排序
             instruction_info[seqnum] = {
@@ -129,10 +138,10 @@ def parse_trace_file(input_path, output_path, raw_output_path):
                 'sch': sch,
                 'issue': issue,
                 'tlbReq': tlbReq,
+                'cacheAcc': cacheAcc,
+                'writeThrough': writeThrough,
+                'cacheDone': cacheDone,
                 'mc': mc,
-                'sCacheReq': sCacheReq,
-                'sCacheResp': sCacheResp,
-                'dtlbReturn': dtlbReturn,
                 'tcpAcc': tcpAcc,
                 'ifTcp': ifTcp,
                 'ifTcpSt': ifTcpSt,
@@ -151,7 +160,7 @@ def parse_trace_file(input_path, output_path, raw_output_path):
     ori_ticks = [] 
     for seqnum in sorted_seqnums:
         data = instruction_info[seqnum]
-        for stage in ['fetch', 'decode', 'scb', 'sch', 'issue', 'tlbReq', 'mc', 'sCacheReq', 'sCacheResp', 'dtlbReturn']:
+        for stage in ['fetch', 'decode', 'scb', 'sch', 'issue', 'tlbReq', 'cacheAcc', 'writeThrough', 'cacheDone','mc']:
             if data[stage] != 0:
                 data[f'original_{stage}'] = data[stage]  
                 ori_ticks.append(data[stage])
@@ -176,7 +185,7 @@ def parse_trace_file(input_path, output_path, raw_output_path):
     # 2.3：保存压缩tick，是否压缩，当前间隔，原始间隔    
     for seqnum in sorted_seqnums:
         data = instruction_info[seqnum]
-        stages = ['fetch', 'decode', 'scb', 'sch', 'issue', 'tlbReq', 'sCacheReq', 'sCacheResp', 'dtlbReturn','mc']
+        stages = ['fetch', 'decode', 'scb', 'sch', 'issue', 'tlbReq', 'cacheAcc', 'writeThrough', 'cacheDone', 'mc']
         prev_stage = None  
         prev_ori_tick = None  
         prev_comp_tick = None  
@@ -186,7 +195,7 @@ def parse_trace_file(input_path, output_path, raw_output_path):
             ori_tick = int(data[stage])
             comp_tick = time_map.get(ori_tick, ori_tick)
             data[stage] = comp_tick
-            if stage!='mc' and prev_stage is not None:
+            if prev_stage is not None:
                 ori_time = ori_tick - prev_ori_tick
                 comp_time = comp_tick - prev_comp_tick
                 data[f"{prev_stage}_enlarged"] = comp_time < ori_time
@@ -202,13 +211,11 @@ def parse_trace_file(input_path, output_path, raw_output_path):
             for addr, ticks in data['tcpAcc'].items():
                 timeCur = []
                 timeCur.append(addr)
-                print(addr)
                 prev = 0
                 prev_comp_tick = 0
                 prev_ori_tick = 0
                 for tick in ticks:
                     comp_tick = time_map.get(tick,tick)
-                    print(tick)
                     if prev:
                         ori_time = tick - prev_ori_tick
                         comp_time = comp_tick - prev_comp_tick
@@ -223,37 +230,12 @@ def parse_trace_file(input_path, output_path, raw_output_path):
     B_sorted = []
     for original_seq,new_seq in new_seqnum_map.items():
         data = instruction_info[original_seq]
-        B_sorted.extend([
-            f"O3PipeView:fetch:{data['fetch']}:{data['pc_raw']}:0:{new_seq}:{data['assm']}",
-            *[f"O3PipeView:{stage}:{value}" for stage, value in [
-                ("decode", data['decode']),
-                ("rename", data['scb']),
-                ("dispatch", data['sch']),
-                ("issue", data['issue'])
-            ]]
-        ])
-
-        if data['tlbReq'] == 0:
-            B_sorted.extend([
-                f"O3PipeView:retire:{data['issue']+4}:store:0"
-            ])
-        elif data['ifTcp'] == 0:
-            B_sorted.extend([
-                f"O3PipeView:complete:{data['sCacheReq']}",
-                f"O3PipeView:retire:{data['mc']-1}:store:{data['mc']}"
-            ])
-        elif data['ifTcpSt'] == 0:
-            B_sorted.extend([
-                f"O3PipeView:complete:{data['dtlbReturn']}",
-                f"O3PipeView:retire:{data['mc']-1}:store:{data['mc']}"
-            ])
-        else:
-            B_sorted.extend([
-                f"O3PipeView:complete:{data['dtlbReturn']}",
-                f"O3PipeView:retire:{data['mc']-1}:store:{data['mc']}" #todo:firTcpResp->mc-1
-            ])
-        
-
+        B_sorted.extend([f"O3PipeView:fetch:{data['fetch']}:{data['pc_raw']}:0:{new_seq}:{data['assm']}"])
+        for stage in ['decode', 'scb', 'sch', 'issue', 'tlbReq', 'cacheAcc', 'writeThrough', 'cacheDone','mc']:
+            if data[stage] != 0:
+                B_sorted.append(f"O3PipeView:{stage}:{data[stage]}")
+        retireTick = data['issue']+4 if not data['mc'] else data['mc']+1
+        B_sorted.extend([f"O3PipeView:retire:{retireTick}"])
 
     # 生成新的输出列表 C_sorted
     C_sorted = []
@@ -261,18 +243,17 @@ def parse_trace_file(input_path, output_path, raw_output_path):
         data = instruction_info[original_seq]
         C_sorted.append(f"\n{new_seq}: {data['assm']}: {data['pc_raw']}")
         prev_stage = 'fetch'
-        stages = ['decode', 'scb', 'sch', 'issue', 'tlbReq', 'sCacheReq', 'sCacheResp', 'dtlbReturn']
+        stages = ['decode', 'scb', 'sch', 'issue', 'tlbReq', 'cacheAcc', 'writeThrough', 'cacheDone', 'mc']
         for stage in stages:
-            if data[stage] == 0:
-                continue  
-            enlarged = data.get(f"{prev_stage}_enlarged")
-            time = data[f"{prev_stage}_time"]
-            if enlarged:
-                ori_time = data[f"{prev_stage}_ori_time"]
-                C_sorted.append(f"{prev_stage}:{time} (原{ori_time})")
-            else:
-                C_sorted.append(f"{prev_stage}:{time}")
-            prev_stage = stage
+            if data[stage] != 0:
+                enlarged = data.get(f"{prev_stage}_enlarged")
+                time = data[f"{prev_stage}_time"]
+                if enlarged:
+                    ori_time = data[f"{prev_stage}_ori_time"]
+                    C_sorted.append(f"{prev_stage}:{time} (原{ori_time})")
+                else:
+                    C_sorted.append(f"{prev_stage}:{time}")
+                prev_stage = stage
 
         if data['tlbReq'] == 0:
             C_sorted.append("issue:4") 
