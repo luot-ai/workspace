@@ -132,10 +132,10 @@ stage_map = {
     "scb": "Scb",
     "sch": "Sch",
     "issue": "Is",
-    "tlbReq": "Tl",
-    "cacheAcc": "Ca",
-    "writeThrough": "Wb",
-    "cacheDone": "Cd",
+    "tlbReq": "Tlb",
+    "cacheAcc": "Acc",
+    "writeThrough": "Wt",
+    "cacheDone": "Md",
     "mc": "Mc",
 }
 

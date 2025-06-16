@@ -3,6 +3,8 @@ import sys
 from typing import List, Dict
 
 def format_stage_string(stage: str, time: int, ori_time: int, enlarged: bool) -> str:
+    if stage == 'cacheDone':
+        stage = 'mc'
     return f"{stage}:{time} (原{ori_time})" if enlarged else f"{stage}:{time}"
 
 STAGE_ORDER = [
@@ -121,9 +123,9 @@ def compress_ticks(tick_list: List[int]) -> Dict[int, int]:
     comp_ticks = sorted_ticks[:]
     for i in range(len(comp_ticks) - 1):
         gap = comp_ticks[i + 1] - comp_ticks[i]
-        if gap >= 16:
+        if gap >= 8:
             for j in range(i + 1, len(comp_ticks)):
-                comp_ticks[j] -= (gap - 16)
+                comp_ticks[j] -= (gap - 8)
     return dict(zip(sorted_ticks, comp_ticks))
 
 def gather_all_ticks(instructions: List[Instruction]) -> List[int]:
@@ -183,11 +185,15 @@ def generate_outputs(instructions: List[Instruction]):
     for inst in sorted_insts:
         new_seq = new_seq_map[inst.seqnum]
         B_list.append(f"O3PipeView:fetch:{inst.stages['fetch']}:{inst.pc}:0:{new_seq}:{inst.assm}")
-        for stage in STAGE_ORDER[1:]:
+        for stage in STAGE_ORDER[1:-1]:
             if stage in inst.stages :
+                printStage = stage
+                if stage == 'cacheDone':
+                    printStage = 'mc'
                 B_list.append(f"O3PipeView:{stage}:{inst.stages[stage]}")
-        retire_tick = inst.stages.get('mc', inst.stages.get('issue', inst.stages['fetch'])) + (1 if 'mc' in inst.stages else 4)
+        retire_tick = inst.stages.get('mc', inst.stages.get('issue', inst.stages['fetch'])) + (0 if 'mc' in inst.stages else 4)
         B_list.append(f"O3PipeView:retire:{retire_tick}")
+        #generate C
         C_list.append(f"\n{new_seq}: {inst.assm}: {inst.pc}")
         prev_stage = 'fetch'
         for stage in STAGE_ORDER[1:]:
@@ -198,15 +204,15 @@ def generate_outputs(instructions: List[Instruction]):
                 C_list.append(format_stage_string(prev_stage, delta, ori, enlarged))
                 prev_stage = stage
         if 'tlbReq' not in inst.stages:
-            C_list.append("issue:4")
+            C_list.append("issue:4")              
         # TCP 访问输出
         if hasattr(inst, 'tcpAccTime'):
             for entry in inst.tcpAccTime:
                 addr = entry[0]
-                C_list.append(f"addr:{addr}")
+                C_list.append(f"addr:{addr}:reqTick:{inst.tcp_access[addr][0]}")
                 if len(entry) >= 2:
                     reqTcp = entry[1]
-                    C_list.append(format_stage_string("   reqTcp", reqTcp[0], reqTcp[1], reqTcp[2]))
+                    C_list.append(format_stage_string("   cacheAcc", reqTcp[0], reqTcp[1], reqTcp[2]))
                 if inst.if_tcp_store and len(entry) >= 3:
                     writeThrough = entry[2]
                     C_list.append(format_stage_string("   writeThrough", writeThrough[0], writeThrough[1], writeThrough[2]))

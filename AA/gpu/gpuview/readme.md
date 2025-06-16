@@ -1,26 +1,24 @@
 * [ ] 访存：
 
-  * [ ] load的tcp_req_ticks是空的（trace在VX上）
-  * [ ] 那几个向量还没处理
-
-    * [ ] dtlb好像确实只有一个
-    * [ ] 最好在源码输出里改成同一行，可能会好处理一些【搞个ss输出流】
-  * [ ] 处理好之后分析cache响应需要多少拍：似乎是50
-  * [ ] load和计算指令：寄存器读写冲突：140 141
-  * [ ] load写回
-  * [ ] 访存资源相关
+  * [ ] systemReq
+  * [X] 目前tcpReq使用dtlbReturn正则匹配，这样子tcpReq的时间包括50+访存堵塞的拍数（可能发送端和接收端都有）
+  * [ ] 白皮书：cache响应拍数
+  * [ ] 白皮书/分支：寄存器读写冲突【canscheduleRead/Write】
+  * [ ] 访存资源相关：memPipe->exec下面的bus和unit占用都只是一周期
 
 ---
 
 MustTodo
 
-* [ ] trace清晰
+* [X] trace清晰
 
-  * [ ] 名称
-  * [ ] tick压缩
-* [ ] 访存：见上
+  * [X] 名称
+  * [X] tick压缩
+  * [X] 压缩时间 cacheacc 和 writethrough在图上显示会比较宽
+* [X] 访存：目前已完成多拍打印
 * [ ] divergence
-* [ ] 取指：几个地方的取指是有问题的
+* [ ] 取指：目前是匹配decodetick之前最近的fetchtick，不一定对
+* [ ] waitcnt指令有问题
 * [ ] 联通梳理
 
 ---
