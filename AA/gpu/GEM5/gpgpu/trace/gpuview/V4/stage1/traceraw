@@ -1,0 +1,458 @@
+
+1: s_load_dwordx4 s[4:7], s[0:1], 0x00: 0x7fd1b6c06100
+fetch:8 (原1311)
+decode:1
+scb:1
+sch:1
+issue:1
+tlbReq:48 (原1250)
+cacheAcc:28 (原50)
+mc:1
+
+2: s_load_dwordx4 s[8:11], s[0:1], 0x10: 0x7fd1b6c06108
+fetch:8 (原1311)
+decode:1
+scb:2
+sch:4
+issue:1
+tlbReq:48 (原1250)
+cacheAcc:28 (原50)
+mc:1
+
+3: s_load_dwordx4 s[12:15], s[0:1], 0x20: 0x7fd1b6c06110
+fetch:8 (原1311)
+decode:1
+scb:6
+sch:9 (原16)
+issue:1
+tlbReq:47 (原1250)
+cacheAcc:31 (原50)
+mc:1
+
+4: s_load_dwordx4 s[16:19], s[0:1], 0x30: 0x7fd1b6c06118
+fetch:8 (原1311)
+decode:1
+scb:15 (原22)
+sch:9 (原16)
+issue:1
+tlbReq:46 (原1250)
+cacheAcc:32 (原50)
+mc:1
+
+5: s_load_dwordx4 s[20:23], s[0:1], 0x40: 0x7fd1b6c06120
+fetch:8 (原1311)
+decode:1
+scb:24 (原38)
+sch:9 (原16)
+issue:1
+tlbReq:47 (原1250)
+cacheAcc:31 (原50)
+mc:1
+
+6: s_load_dword s24, s[0:1], 0x50: 0x7fd1b6c06128
+fetch:8 (原1311)
+decode:1
+scb:33 (原54)
+sch:9 (原16)
+issue:1
+tlbReq:49 (原1250)
+cacheAcc:29 (原50)
+mc:1
+
+7: s_waitcnt lgkmcnt(0): 0x7fd1b6c06130
+fetch:8 (原1311)
+decode:1
+scb:42 (原70)
+sch:1
+issue:4
+
+8: s_lshl_b32 s2, s2, 6: 0x7fd1b6c06134
+fetch:8 (原1311)
+decode:1
+scb:123 (原1373)
+sch:1
+issue:4
+
+9: v_add_co_u32 v0, vcc, s2, v0: 0x7fd1b6c06138
+fetch:8 (原1311)
+decode:1
+scb:126 (原1376)
+sch:1
+issue:4
+
+10: v_mov_b32 v3, s5: 0x7fd1b6c0613c
+fetch:10 (原1313)
+decode:1
+scb:125 (原1375)
+sch:4
+issue:4
+
+11: v_add_co_u32 v2, vcc_lo, v0, s4: 0x7fd1b6c06140
+fetch:2
+decode:1
+scb:129 (原1379)
+sch:4
+issue:4
+
+12: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc: 0x7fd1b6c06148
+fetch:2
+decode:1
+scb:135 (原1385)
+sch:2
+issue:4
+
+13: v_mov_b32 v5, s7: 0x7fd1b6c06150
+fetch:2
+decode:1
+scb:137 (原1387)
+sch:4
+issue:4
+
+14: v_add_co_u32 v4, vcc_lo, v0, s6: 0x7fd1b6c06154
+fetch:3
+decode:1
+scb:140 (原1390)
+sch:4
+issue:4
+
+15: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc: 0x7fd1b6c0615c
+fetch:7
+decode:1
+scb:142 (原1392)
+sch:2
+issue:4
+
+16: v_cmp_lt_u64 s[106:107], v[2:3], s[8:9]: 0x7fd1b6c06164
+fetch:16 (原23)
+decode:1
+scb:137 (原1380)
+sch:2
+issue:4
+
+17: s_cbranch_vccz: 0x7fd1b6c0616c
+fetch:25 (原39)
+decode:1
+scb:132 (原1368)
+sch:1
+issue:4
+
+18: s_mov_b64 exec, -1: 0x7fd1b6c061ac
+fetch:3
+decode:1
+scb:1
+sch:1
+issue:4
+
+19: s_lshl_b32 s25, s24, 4: 0x7fd1b6c061b0
+fetch:3
+decode:1
+scb:2
+sch:4
+issue:4
+
+20: v_lshlrev_b32 v1, 4, v0: 0x7fd1b6c061b4
+fetch:3
+decode:1
+scb:6
+sch:1
+issue:4
+
+21: v_mov_b32 v3, s9: 0x7fd1b6c061b8
+fetch:3
+decode:1
+scb:7
+sch:4
+issue:4
+
+22: v_add_co_u32 v2, vcc_lo, v1, s8: 0x7fd1b6c061bc
+fetch:7
+decode:1
+scb:7
+sch:4
+issue:4
+
+23: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc: 0x7fd1b6c061c4
+fetch:4
+decode:1
+scb:13
+sch:2
+issue:4
+
+24: v_mov_b32 v5, s11: 0x7fd1b6c061cc
+fetch:4
+decode:1
+scb:15
+sch:4
+issue:4
+
+25: v_add_co_u32 v4, vcc_lo, v1, s10: 0x7fd1b6c061d0
+fetch:4
+decode:1
+scb:19
+sch:4
+issue:4
+
+26: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc: 0x7fd1b6c061d8
+fetch:4
+decode:1
+scb:25
+sch:2
+issue:4
+
+27: v_cmp_lt_u64 s[106:107], v[2:3], s[12:13]: 0x7fd1b6c061e0
+fetch:4
+decode:1
+scb:29
+sch:2
+issue:4
+
+28: s_cbranch_vccz: 0x7fd1b6c061e8
+fetch:4
+decode:1
+scb:33
+sch:8 (原11)
+issue:4
+
+29: s_lshl_b32 s25, s24, 2: 0x7fd1b6c06224
+fetch:3
+decode:1
+scb:1
+sch:1
+issue:4
+
+30: v_lshlrev_b32 v1, 2, v0: 0x7fd1b6c06228
+fetch:3
+decode:1
+scb:2
+sch:1
+issue:4
+
+31: v_mov_b32 v3, s13: 0x7fd1b6c0622c
+fetch:3
+decode:1
+scb:3
+sch:4
+issue:4
+
+32: v_add_co_u32 v2, vcc_lo, v1, s12: 0x7fd1b6c06230
+fetch:3
+decode:1
+scb:7
+sch:4
+issue:4
+
+33: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc: 0x7fd1b6c06238
+fetch:3
+decode:1
+scb:13
+sch:2
+issue:4
+
+34: v_mov_b32 v5, s15: 0x7fd1b6c06240
+fetch:4
+decode:1
+scb:11
+sch:4
+issue:4
+
+35: v_add_co_u32 v4, vcc_lo, v1, s14: 0x7fd1b6c06244
+fetch:4
+decode:1
+scb:15
+sch:4
+issue:4
+
+36: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc: 0x7fd1b6c0624c
+fetch:4
+decode:1
+scb:21
+sch:2
+issue:4
+
+37: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]: 0x7fd1b6c06254
+fetch:4
+decode:1
+scb:25
+sch:2
+issue:4
+
+38: s_cbranch_vccz: 0x7fd1b6c0625c
+fetch:4
+decode:1
+scb:29
+sch:3
+issue:4
+
+39: s_and_b64 exec, exec, vcc_lo: 0x7fd1b6c06260
+fetch:4
+decode:1
+scb:32
+sch:4
+issue:4
+
+40: flat_load_dword v1, v[2:3]: 0x7fd1b6c06264
+fetch:4
+decode:1
+scb:36
+sch:1
+issue:1
+tlbReq:16 (原1327)
+cacheAcc:8 (原50)
+mc:8 (原51)
+addr:0x130a2e100:reqTick:10855746192
+   cacheAcc:8 (原50)
+addr:0x130a2e140:reqTick:10855746192
+   cacheAcc:8 (原50)
+addr:0x130a2e180:reqTick:10855746192
+   cacheAcc:8 (原50)
+addr:0x130a2e1c0:reqTick:10855746192
+   cacheAcc:8 (原50)
+
+41: v_add_co_u32 v2, vcc_lo, v2, s25: 0x7fd1b6c0626c
+fetch:4
+decode:1
+scb:37
+sch:1
+issue:4
+
+42: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc: 0x7fd1b6c06274
+fetch:4
+decode:1
+scb:40
+sch:2
+issue:4
+
+43: s_waitcnt vmcnt(0): 0x7fd1b6c0627c
+fetch:41
+decode:1
+scb:5
+sch:4
+issue:4
+
+44: flat_store_dword v[4:5], v1: 0x7fd1b6c06280
+fetch:4
+decode:1
+scb:35 (原1431)
+sch:1
+issue:1
+tlbReq:62 (原1259)
+cacheAcc:8 (原52)
+writeThrough:32 (原183)
+mc:8 (原51)
+addr:0x3feeda100:reqTick:10855747556
+   cacheAcc:8 (原52)
+   writeThrough:32 (原183)
+addr:0x3feeda140:reqTick:10855747556
+   cacheAcc:8 (原52)
+   writeThrough:24 (原173)
+addr:0x3feeda180:reqTick:10855747556
+   cacheAcc:8 (原52)
+   writeThrough:16 (原164)
+addr:0x3feeda1c0:reqTick:10855747556
+   cacheAcc:8 (原52)
+   writeThrough:8 (原155)
+
+45: v_add_co_u32 v4, vcc_lo, v4, s25: 0x7fd1b6c06288
+fetch:4
+decode:1
+scb:36 (原1432)
+sch:1
+issue:4
+
+46: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc: 0x7fd1b6c06290
+fetch:4
+decode:1
+scb:39 (原1435)
+sch:2
+issue:4
+
+47: s_branch: 0x7fd1b6c06298
+fetch:4
+decode:1
+scb:41 (原1437)
+sch:1
+issue:4
+
+48: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]: 0x7fd1b6c06254
+fetch:3
+decode:1
+scb:1
+sch:1
+issue:4
+
+49: s_cbranch_vccz: 0x7fd1b6c0625c
+fetch:3
+decode:1
+scb:4
+sch:1
+issue:4
+
+50: s_mov_b64 exec, -1: 0x7fd1b6c0629c
+fetch:3
+decode:1
+scb:1
+sch:3
+issue:4
+
+51: v_mov_b32 v3, s17: 0x7fd1b6c062a0
+fetch:3
+decode:1
+scb:4
+sch:1
+issue:4
+
+52: v_add_co_u32 v2, vcc_lo, v0, s16: 0x7fd1b6c062a4
+fetch:3
+decode:1
+scb:5
+sch:4
+issue:4
+
+53: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc: 0x7fd1b6c062ac
+fetch:3
+decode:1
+scb:11
+sch:2
+issue:4
+
+54: v_mov_b32 v5, s19: 0x7fd1b6c062b4
+fetch:3
+decode:1
+scb:13
+sch:4
+issue:4
+
+55: v_add_co_u32 v4, vcc_lo, v0, s18: 0x7fd1b6c062b8
+fetch:3
+decode:1
+scb:17
+sch:4
+issue:4
+
+56: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc: 0x7fd1b6c062c0
+fetch:4
+decode:1
+scb:19
+sch:2
+issue:4
+
+57: v_cmp_lt_u64 s[106:107], v[2:3], s[20:21]: 0x7fd1b6c062c8
+fetch:4
+decode:1
+scb:23
+sch:2
+issue:4
+
+58: s_cbranch_vccz: 0x7fd1b6c062d0
+fetch:4
+decode:1
+scb:27
+sch:1
+issue:4
+
+59: s_endpgm: 0x7fd1b6c062ec
+fetch:3
+decode:1
+scb:57 (原1492)
+sch:1
+issue:4

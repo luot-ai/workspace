@@ -335,5 +335,5 @@
 ![1747581044943](image/arch(2)/1747581044943.png)
 
 ### 2.2.4.  MemPipeLine
-- see [this](../PPT/Gem5-GPU_3.pptx) for detail
+see [this](../PPT/Gem5-GPU_4.pptx) and [this](../PPT/Gem5-GPU_5.pptx) for detail
 

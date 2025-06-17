@@ -9,8 +9,10 @@
     ```bash
     build/VEGA_X86/gem5.opt -d trace_square_tr --debug-flags=RubyGenerated,RubySlicc --debug-start=10852362985000 --debug-file=trace configs/example/gpufs/mi300.py -m 288622406500 --disk-image gem5-resources/src/x86-ubuntu-gpu-ml/disk-image/x86-ubuntu-gpu-ml --kernel gem5-resources/src/x86-ubuntu-gpu-ml/vmlinux-gpu-ml --app gem5-resources/src/gpu/square/bin.default/square.default --restore-dir square-cpt
     ```
-
+- 用于流水级可视化(--debug-flags=GPUView)
+   ```bash
    build/VEGA_X86/gem5.opt -d trace_square_pipe --debug-flags=GPUView --debug-file=trace configs/example/gpufs/mi300.py --disk-image gem5-resources/src/x86-ubuntu-gpu-ml/disk-image/x86-ubuntu-gpu-ml --kernel gem5-resources/src/x86-ubuntu-gpu-ml/vmlinux-gpu-ml --app gem5-resources/src/gpu/square/bin.default/square.default --restore-dir square-cpt
+   ```
 
 
 1. flags中不要GPUcoalescer GPUTLB
