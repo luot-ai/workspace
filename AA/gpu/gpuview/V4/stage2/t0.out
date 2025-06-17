@@ -1,0 +1,709 @@
+Kanata	0004
+C=	0
+I	0	1	1
+L	0	0	0x7fd1b6c06100: s_load_dwordx4 s[4:7], s[0:1], 0x00
+L	0	1	fetched @ tick 10855742047
+S	0	0	F
+I	1	2	1
+L	1	0	0x7fd1b6c06108: s_load_dwordx4 s[8:11], s[0:1], 0x10
+L	1	1	fetched @ tick 10855742047
+S	1	0	F
+I	2	3	1
+L	2	0	0x7fd1b6c06110: s_load_dwordx4 s[12:15], s[0:1], 0x20
+L	2	1	fetched @ tick 10855742047
+S	2	0	F
+I	3	4	0
+L	3	0	0x7fd1b6c06118: s_load_dwordx4 s[16:19], s[0:1], 0x30
+L	3	1	fetched @ tick 10855742047
+S	3	0	F
+I	4	5	0
+L	4	0	0x7fd1b6c06120: s_load_dwordx4 s[20:23], s[0:1], 0x40
+L	4	1	fetched @ tick 10855742047
+S	4	0	F
+I	5	6	0
+L	5	0	0x7fd1b6c06128: s_load_dword s24, s[0:1], 0x50
+L	5	1	fetched @ tick 10855742047
+S	5	0	F
+I	6	7	0
+L	6	0	0x7fd1b6c06130: s_waitcnt lgkmcnt(0)
+L	6	1	fetched @ tick 10855742047
+S	6	0	F
+I	7	8	0
+L	7	0	0x7fd1b6c06134: s_lshl_b32 s2, s2, 6
+L	7	1	fetched @ tick 10855742047
+S	7	0	F
+I	8	9	0
+L	8	0	0x7fd1b6c06138: v_add_co_u32 v0, vcc, s2, v0
+L	8	1	fetched @ tick 10855742047
+S	8	0	F
+I	9	10	0
+L	9	0	0x7fd1b6c0613c: v_mov_b32 v3, s5
+L	9	1	fetched @ tick 10855742047
+S	9	0	F
+C	8
+S	0	0	Dc
+S	1	0	Dc
+S	2	0	Dc
+S	3	0	Dc
+S	4	0	Dc
+S	5	0	Dc
+S	6	0	Dc
+S	7	0	Dc
+S	8	0	Dc
+I	10	11	0
+L	10	0	0x7fd1b6c06140: v_add_co_u32 v2, vcc_lo, v0, s4
+L	10	1	fetched @ tick 10855742055
+S	10	0	F
+I	11	12	0
+L	11	0	0x7fd1b6c06148: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+L	11	1	fetched @ tick 10855742055
+S	11	0	F
+I	12	13	0
+L	12	0	0x7fd1b6c06150: v_mov_b32 v5, s7
+L	12	1	fetched @ tick 10855742055
+S	12	0	F
+I	13	14	0
+L	13	0	0x7fd1b6c06154: v_add_co_u32 v4, vcc_lo, v0, s6
+L	13	1	fetched @ tick 10855742055
+S	13	0	F
+I	14	15	0
+L	14	0	0x7fd1b6c0615c: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+L	14	1	fetched @ tick 10855742055
+S	14	0	F
+I	15	16	0
+L	15	0	0x7fd1b6c06164: v_cmp_lt_u64 s[106:107], v[2:3], s[8:9]
+L	15	1	fetched @ tick 10855742055
+S	15	0	F
+I	16	17	0
+L	16	0	0x7fd1b6c0616c: s_cbranch_vccz
+L	16	1	fetched @ tick 10855742055
+S	16	0	F
+C	1
+S	0	0	Scb
+S	1	0	Scb
+S	2	0	Scb
+S	3	0	Scb
+S	4	0	Scb
+S	5	0	Scb
+S	6	0	Scb
+S	7	0	Scb
+S	8	0	Scb
+C	1
+S	0	0	Sch
+S	9	0	Dc
+S	10	0	Dc
+S	11	0	Dc
+S	12	0	Dc
+C	1
+S	0	0	Is
+S	1	0	Sch
+S	9	0	Scb
+S	10	0	Scb
+S	11	0	Scb
+S	12	0	Scb
+S	13	0	Dc
+C	1
+S	13	0	Scb
+C	3
+S	0	0	Tlb
+S	1	0	Is
+S	2	0	Sch
+S	14	0	Dc
+C	1
+S	14	0	Scb
+C	3
+S	1	0	Tlb
+C	8
+S	2	0	Is
+S	3	0	Sch
+S	15	0	Dc
+C	1
+S	15	0	Scb
+C	3
+S	2	0	Tlb
+C	8
+S	3	0	Is
+S	4	0	Sch
+S	16	0	Dc
+C	1
+S	16	0	Scb
+C	3
+S	3	0	Tlb
+C	8
+S	4	0	Is
+S	5	0	Sch
+C	4
+S	4	0	Tlb
+C	8
+S	5	0	Is
+S	6	0	Sch
+C	1
+S	6	0	Is
+C	3
+S	5	0	Tlb
+C	1
+R	6	6	0
+C	7
+S	0	0	Acc
+C	4
+S	1	0	Acc
+C	8
+S	2	0	Acc
+C	8
+S	3	0	Acc
+C	8
+S	0	0	Md
+C	1
+R	0	0	0
+C	1
+S	4	0	Acc
+C	2
+S	1	0	Md
+C	1
+R	1	1	0
+C	8
+S	5	0	Acc
+C	2
+S	2	0	Md
+C	1
+R	2	2	0
+C	8
+S	3	0	Md
+C	1
+R	3	3	0
+C	8
+S	4	0	Md
+C	1
+R	4	4	0
+C	8
+S	5	0	Md
+C	1
+R	5	5	0
+C	1
+S	7	0	Sch
+C	1
+S	7	0	Is
+C	2
+S	8	0	Sch
+C	1
+S	8	0	Is
+S	9	0	Sch
+C	1
+R	7	7	0
+C	3
+R	8	8	0
+S	9	0	Is
+S	10	0	Sch
+C	4
+R	9	9	0
+S	10	0	Is
+C	2
+S	11	0	Sch
+C	2
+R	10	10	0
+S	11	0	Is
+S	12	0	Sch
+C	4
+R	11	11	0
+S	12	0	Is
+S	13	0	Sch
+C	4
+R	12	12	0
+S	13	0	Is
+C	2
+S	14	0	Sch
+C	2
+R	13	13	0
+S	14	0	Is
+C	2
+S	15	0	Sch
+C	2
+R	14	14	0
+S	15	0	Is
+C	2
+S	16	0	Sch
+C	1
+S	16	0	Is
+I	17	18	0
+L	17	0	0x7fd1b6c061ac: s_mov_b64 exec, -1
+L	17	1	fetched @ tick 10855742229
+S	17	0	F
+I	18	19	0
+L	18	0	0x7fd1b6c061b0: s_lshl_b32 s25, s24, 4
+L	18	1	fetched @ tick 10855742229
+S	18	0	F
+I	19	20	0
+L	19	0	0x7fd1b6c061b4: v_lshlrev_b32 v1, 4, v0
+L	19	1	fetched @ tick 10855742229
+S	19	0	F
+I	20	21	0
+L	20	0	0x7fd1b6c061b8: v_mov_b32 v3, s9
+L	20	1	fetched @ tick 10855742229
+S	20	0	F
+I	21	22	0
+L	21	0	0x7fd1b6c061bc: v_add_co_u32 v2, vcc_lo, v1, s8
+L	21	1	fetched @ tick 10855742229
+S	21	0	F
+C	1
+R	15	15	0
+C	2
+S	17	0	Dc
+S	18	0	Dc
+S	19	0	Dc
+S	20	0	Dc
+I	22	23	0
+L	22	0	0x7fd1b6c061c4: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+L	22	1	fetched @ tick 10855742232
+S	22	0	F
+I	23	24	0
+L	23	0	0x7fd1b6c061cc: v_mov_b32 v5, s11
+L	23	1	fetched @ tick 10855742232
+S	23	0	F
+I	24	25	0
+L	24	0	0x7fd1b6c061d0: v_add_co_u32 v4, vcc_lo, v1, s10
+L	24	1	fetched @ tick 10855742232
+S	24	0	F
+I	25	26	0
+L	25	0	0x7fd1b6c061d8: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+L	25	1	fetched @ tick 10855742232
+S	25	0	F
+I	26	27	0
+L	26	0	0x7fd1b6c061e0: v_cmp_lt_u64 s[106:107], v[2:3], s[12:13]
+L	26	1	fetched @ tick 10855742232
+S	26	0	F
+I	27	28	0
+L	27	0	0x7fd1b6c061e8: s_cbranch_vccz
+L	27	1	fetched @ tick 10855742232
+S	27	0	F
+C	1
+R	16	16	0
+S	17	0	Scb
+S	18	0	Scb
+S	19	0	Scb
+S	20	0	Scb
+C	1
+S	17	0	Sch
+C	1
+S	17	0	Is
+S	18	0	Sch
+C	1
+S	21	0	Dc
+S	22	0	Dc
+S	23	0	Dc
+S	24	0	Dc
+S	25	0	Dc
+S	26	0	Dc
+S	27	0	Dc
+C	1
+S	21	0	Scb
+S	22	0	Scb
+S	23	0	Scb
+S	24	0	Scb
+S	25	0	Scb
+S	26	0	Scb
+S	27	0	Scb
+C	2
+R	17	17	0
+S	18	0	Is
+S	19	0	Sch
+C	1
+S	19	0	Is
+S	20	0	Sch
+C	3
+R	18	18	0
+C	1
+R	19	19	0
+S	20	0	Is
+S	21	0	Sch
+C	4
+R	20	20	0
+S	21	0	Is
+C	2
+S	22	0	Sch
+C	2
+R	21	21	0
+S	22	0	Is
+S	23	0	Sch
+C	4
+R	22	22	0
+S	23	0	Is
+S	24	0	Sch
+C	4
+R	23	23	0
+S	24	0	Is
+C	2
+S	25	0	Sch
+C	2
+R	24	24	0
+S	25	0	Is
+C	2
+S	26	0	Sch
+C	2
+R	25	25	0
+S	26	0	Is
+C	2
+S	27	0	Sch
+C	2
+R	26	26	0
+C	6
+S	27	0	Is
+I	28	29	0
+L	28	0	0x7fd1b6c06224: s_lshl_b32 s25, s24, 2
+L	28	1	fetched @ tick 10855742278
+S	28	0	F
+I	29	30	0
+L	29	0	0x7fd1b6c06228: v_lshlrev_b32 v1, 2, v0
+L	29	1	fetched @ tick 10855742278
+S	29	0	F
+I	30	31	0
+L	30	0	0x7fd1b6c0622c: v_mov_b32 v3, s13
+L	30	1	fetched @ tick 10855742278
+S	30	0	F
+I	31	32	0
+L	31	0	0x7fd1b6c06230: v_add_co_u32 v2, vcc_lo, v1, s12
+L	31	1	fetched @ tick 10855742278
+S	31	0	F
+I	32	33	0
+L	32	0	0x7fd1b6c06238: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+L	32	1	fetched @ tick 10855742278
+S	32	0	F
+C	3
+S	28	0	Dc
+S	29	0	Dc
+S	30	0	Dc
+S	31	0	Dc
+S	32	0	Dc
+I	33	34	0
+L	33	0	0x7fd1b6c06240: v_mov_b32 v5, s15
+L	33	1	fetched @ tick 10855742281
+S	33	0	F
+I	34	35	0
+L	34	0	0x7fd1b6c06244: v_add_co_u32 v4, vcc_lo, v1, s14
+L	34	1	fetched @ tick 10855742281
+S	34	0	F
+I	35	36	0
+L	35	0	0x7fd1b6c0624c: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+L	35	1	fetched @ tick 10855742281
+S	35	0	F
+I	36	37	0
+L	36	0	0x7fd1b6c06254: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+L	36	1	fetched @ tick 10855742281
+S	36	0	F
+I	37	38	0
+L	37	0	0x7fd1b6c0625c: s_cbranch_vccz
+L	37	1	fetched @ tick 10855742281
+S	37	0	F
+I	38	39	0
+L	38	0	0x7fd1b6c06260: s_and_b64 exec, exec, vcc_lo
+L	38	1	fetched @ tick 10855742281
+S	38	0	F
+I	39	40	0
+L	39	0	0x7fd1b6c06264: flat_load_dword v1, v[2:3]
+L	39	1	fetched @ tick 10855742281
+S	39	0	F
+I	40	41	0
+L	40	0	0x7fd1b6c0626c: v_add_co_u32 v2, vcc_lo, v2, s25
+L	40	1	fetched @ tick 10855742281
+S	40	0	F
+I	41	42	0
+L	41	0	0x7fd1b6c06274: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+L	41	1	fetched @ tick 10855742281
+S	41	0	F
+I	42	43	0
+L	42	0	0x7fd1b6c0627c: s_waitcnt vmcnt(0)
+L	42	1	fetched @ tick 10855742281
+S	42	0	F
+C	1
+R	27	27	0
+S	28	0	Scb
+S	29	0	Scb
+S	30	0	Scb
+S	31	0	Scb
+S	32	0	Scb
+C	1
+S	28	0	Sch
+C	1
+S	28	0	Is
+S	29	0	Sch
+C	1
+S	29	0	Is
+S	30	0	Sch
+S	33	0	Dc
+S	34	0	Dc
+S	35	0	Dc
+S	36	0	Dc
+S	37	0	Dc
+S	38	0	Dc
+S	39	0	Dc
+S	40	0	Dc
+S	41	0	Dc
+C	1
+S	33	0	Scb
+S	34	0	Scb
+S	35	0	Scb
+S	36	0	Scb
+S	37	0	Scb
+S	38	0	Scb
+S	39	0	Scb
+S	40	0	Scb
+S	41	0	Scb
+C	2
+R	28	28	0
+C	1
+R	29	29	0
+S	30	0	Is
+S	31	0	Sch
+C	4
+R	30	30	0
+S	31	0	Is
+C	2
+S	32	0	Sch
+C	2
+R	31	31	0
+S	32	0	Is
+S	33	0	Sch
+C	4
+R	32	32	0
+S	33	0	Is
+S	34	0	Sch
+C	4
+R	33	33	0
+S	34	0	Is
+C	2
+S	35	0	Sch
+C	2
+R	34	34	0
+S	35	0	Is
+C	2
+S	36	0	Sch
+C	2
+R	35	35	0
+S	36	0	Is
+C	2
+S	37	0	Sch
+C	2
+R	36	36	0
+C	1
+S	37	0	Is
+S	38	0	Sch
+I	43	44	0
+L	43	0	0x7fd1b6c06280: flat_store_dword v[4:5], v1
+L	43	1	fetched @ tick 10855742318
+S	43	0	F
+I	44	45	0
+L	44	0	0x7fd1b6c06288: v_add_co_u32 v4, vcc_lo, v4, s25
+L	44	1	fetched @ tick 10855742318
+S	44	0	F
+I	45	46	0
+L	45	0	0x7fd1b6c06290: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+L	45	1	fetched @ tick 10855742318
+S	45	0	F
+I	46	47	0
+L	46	0	0x7fd1b6c06298: s_branch
+L	46	1	fetched @ tick 10855742318
+S	46	0	F
+C	4
+R	37	37	0
+S	38	0	Is
+S	39	0	Sch
+S	42	0	Dc
+S	43	0	Dc
+S	44	0	Dc
+S	45	0	Dc
+S	46	0	Dc
+C	1
+S	39	0	Is
+S	40	0	Sch
+S	42	0	Scb
+S	43	0	Scb
+S	44	0	Scb
+S	45	0	Scb
+S	46	0	Scb
+C	1
+S	40	0	Is
+C	2
+R	38	38	0
+S	41	0	Sch
+C	1
+S	39	0	Tlb
+C	1
+R	40	40	0
+S	41	0	Is
+S	42	0	Sch
+C	4
+R	41	41	0
+S	42	0	Is
+C	4
+R	42	42	0
+C	4
+S	39	0	Acc
+C	8
+S	39	0	Md
+C	8
+R	39	39	0
+C	2
+S	43	0	Sch
+C	1
+S	43	0	Is
+S	44	0	Sch
+C	1
+S	44	0	Is
+C	2
+S	45	0	Sch
+C	1
+S	43	0	Tlb
+C	1
+R	44	44	0
+S	45	0	Is
+S	46	0	Sch
+C	1
+S	46	0	Is
+I	47	48	0
+L	47	0	0x7fd1b6c06254: v_cmp_lt_u64 s[106:107], v[2:3], s[16:17]
+L	47	1	fetched @ tick 10855742365
+S	47	0	F
+I	48	49	0
+L	48	0	0x7fd1b6c0625c: s_cbranch_vccz
+L	48	1	fetched @ tick 10855742365
+S	48	0	F
+C	3
+R	45	45	0
+S	47	0	Dc
+S	48	0	Dc
+C	1
+R	46	46	0
+S	47	0	Scb
+S	48	0	Scb
+C	1
+S	47	0	Sch
+C	1
+S	47	0	Is
+C	2
+S	48	0	Sch
+C	1
+S	48	0	Is
+I	49	50	0
+L	49	0	0x7fd1b6c0629c: s_mov_b64 exec, -1
+L	49	1	fetched @ tick 10855742374
+S	49	0	F
+I	50	51	0
+L	50	0	0x7fd1b6c062a0: v_mov_b32 v3, s17
+L	50	1	fetched @ tick 10855742374
+S	50	0	F
+I	51	52	0
+L	51	0	0x7fd1b6c062a4: v_add_co_u32 v2, vcc_lo, v0, s16
+L	51	1	fetched @ tick 10855742374
+S	51	0	F
+I	52	53	0
+L	52	0	0x7fd1b6c062ac: v_addc_co_u32 v3, vcc_lo, v3, 0, vcc_lo, vcc
+L	52	1	fetched @ tick 10855742374
+S	52	0	F
+I	53	54	0
+L	53	0	0x7fd1b6c062b4: v_mov_b32 v5, s19
+L	53	1	fetched @ tick 10855742374
+S	53	0	F
+I	54	55	0
+L	54	0	0x7fd1b6c062b8: v_add_co_u32 v4, vcc_lo, v0, s18
+L	54	1	fetched @ tick 10855742374
+S	54	0	F
+C	1
+R	47	47	0
+C	2
+S	49	0	Dc
+S	50	0	Dc
+S	51	0	Dc
+S	52	0	Dc
+S	53	0	Dc
+S	54	0	Dc
+I	55	56	0
+L	55	0	0x7fd1b6c062c0: v_addc_co_u32 v5, vcc_lo, v5, 0, vcc_lo, vcc
+L	55	1	fetched @ tick 10855742377
+S	55	0	F
+I	56	57	0
+L	56	0	0x7fd1b6c062c8: v_cmp_lt_u64 s[106:107], v[2:3], s[20:21]
+L	56	1	fetched @ tick 10855742377
+S	56	0	F
+I	57	58	0
+L	57	0	0x7fd1b6c062d0: s_cbranch_vccz
+L	57	1	fetched @ tick 10855742377
+S	57	0	F
+C	1
+R	48	48	0
+S	49	0	Scb
+S	50	0	Scb
+S	51	0	Scb
+S	52	0	Scb
+S	53	0	Scb
+S	54	0	Scb
+C	1
+S	49	0	Sch
+C	2
+S	55	0	Dc
+S	56	0	Dc
+S	57	0	Dc
+C	1
+S	49	0	Is
+S	50	0	Sch
+S	55	0	Scb
+S	56	0	Scb
+S	57	0	Scb
+C	1
+S	50	0	Is
+S	51	0	Sch
+C	3
+R	49	49	0
+C	1
+R	50	50	0
+S	51	0	Is
+C	2
+S	52	0	Sch
+C	2
+R	51	51	0
+S	52	0	Is
+S	53	0	Sch
+C	4
+R	52	52	0
+S	53	0	Is
+S	54	0	Sch
+C	4
+R	53	53	0
+S	54	0	Is
+C	2
+S	55	0	Sch
+C	2
+R	54	54	0
+S	55	0	Is
+C	2
+S	56	0	Sch
+C	2
+R	55	55	0
+S	56	0	Is
+C	2
+S	57	0	Sch
+C	1
+S	57	0	Is
+I	58	59	0
+L	58	0	0x7fd1b6c062ec: s_endpgm
+L	58	1	fetched @ tick 10855742410
+S	58	0	F
+C	1
+R	56	56	0
+C	2
+S	58	0	Dc
+C	1
+R	57	57	0
+S	58	0	Scb
+C	8
+S	43	0	Acc
+C	8
+S	43	0	Wt
+C	32
+S	43	0	Md
+C	8
+R	43	43	0
+C	1
+S	58	0	Sch
+C	1
+S	58	0	Is
+C	4
+R	58	58	0
